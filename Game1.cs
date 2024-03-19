@@ -7,12 +7,22 @@ namespace Cosmic_Labirynth
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager graphics;
-        private SpriteBatch spriteBatch;
+        private GraphicsDeviceManager _graphics;
+        private SpriteBatch _spriteBatch;
+
+        
 
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            _graphics = new GraphicsDeviceManager(this);
+
+            // Wymiary okna
+            _graphics.PreferredBackBufferWidth = 800;
+            _graphics.PreferredBackBufferHeight = 500;
+            _graphics.ApplyChanges();
+
+            GameStateManager.Instance.SetGraphics(_graphics);
+
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -24,7 +34,7 @@ namespace Cosmic_Labirynth
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
             GameStateManager.Instance.SetContent(Content);
             GameStateManager.Instance.AddScreen(new TitleGameState(GraphicsDevice));
         }
@@ -46,7 +56,7 @@ namespace Cosmic_Labirynth
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            GameStateManager.Instance.Draw(spriteBatch);
+            GameStateManager.Instance.Draw(_spriteBatch);
             base.Draw(gameTime);
         }
     }

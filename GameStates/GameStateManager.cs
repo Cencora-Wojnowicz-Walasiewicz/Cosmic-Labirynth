@@ -13,6 +13,7 @@ namespace Cosmic_Labirynth.GameStates
     {
         private ContentManager _content;
         private bool GameOn = true;
+        public GraphicsDeviceManager _graphics;
 
         // pojedynczy byt statusu
         private static GameStateManager _instance;
@@ -149,6 +150,11 @@ namespace Cosmic_Labirynth.GameStates
         public bool GetGamePower()
         {
             return GameOn;
+        }
+
+        public void SetGraphics(GraphicsDeviceManager graphics)
+        {
+            _graphics = graphics;
         }
     }
 }
