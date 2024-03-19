@@ -36,11 +36,10 @@ namespace Cosmic_Labirynth
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
             GameStateManager.Instance.Update(gameTime);
             base.Update(gameTime);
+            if (!GameStateManager.Instance.GetGamePower())
+                Exit();
         }
 
         protected override void Draw(GameTime gameTime)

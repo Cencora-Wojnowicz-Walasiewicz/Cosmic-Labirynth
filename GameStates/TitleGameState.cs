@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,14 @@ namespace Cosmic_Labirynth.GameStates
 
         public override void Update(GameTime gameTime)
         {
-            //
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+                GameStateManager.Instance.ChangeScreen(new InGameGameState(_graphicsDevice));
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                GameStateManager.Instance.ClearScreens();
+                GameStateManager.Instance.CloseGame();
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -43,6 +51,8 @@ namespace Cosmic_Labirynth.GameStates
             //
             spriteBatch.End();
         }
+
+
 
     }
 }

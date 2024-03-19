@@ -38,7 +38,10 @@ namespace Cosmic_Labirynth.GameStates
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            _graphicsDevice.Clear(Color.Blue);
+            spriteBatch.Begin();
             //
+            spriteBatch.End();
         }
     }
 }

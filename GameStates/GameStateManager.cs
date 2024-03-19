@@ -12,6 +12,7 @@ namespace Cosmic_Labirynth.GameStates
     public class GameStateManager
     {
         private ContentManager _content;
+        private bool GameOn = true;
 
         // pojedynczy byt statusu
         private static GameStateManager _instance;
@@ -137,6 +138,17 @@ namespace Cosmic_Labirynth.GameStates
             {
                 state.UnloadContent();
             }
+        }
+
+        public void CloseGame()
+        {
+            ClearScreens();
+            GameOn = false;
+        }
+
+        public bool GetGamePower()
+        {
+            return GameOn;
         }
     }
 }
