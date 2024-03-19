@@ -1,0 +1,26 @@
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.exe
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.deps.json
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.runtimeconfig.json
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.pdb
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\MonoGame.Framework.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.csproj.AssemblyReference.cache
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.AssemblyInfoInputs.cache
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.AssemblyInfo.cs
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.csproj.CoreCompileInputs.cache
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.sourcelink.json
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.csproj.CopyComplete
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\refint\Cosmic Labirynth.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.pdb
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.genruntimeconfig.cache
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\obj\Debug\net6.0\ref\Cosmic Labirynth.dll
