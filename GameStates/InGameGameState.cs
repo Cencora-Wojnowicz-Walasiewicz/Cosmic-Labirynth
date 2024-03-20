@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Input;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.IO;
+using System.Diagnostics;
 
 namespace Cosmic_Labirynth.GameStates
 {
@@ -20,7 +21,7 @@ namespace Cosmic_Labirynth.GameStates
 
         private List<Sprite> _sprites;
         private MapHandler _mapHandler = new MapHandler();
-        private float _Scale = 3f;
+        private float _Scale = 1f;
 
         private Input _Input;
 
@@ -120,7 +121,7 @@ namespace Cosmic_Labirynth.GameStates
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            _graphicsDevice.Clear(Color.Blue);
+            _graphicsDevice.Clear(Color.Red);
             spriteBatch.Begin();
             foreach (var sprite in _sprites)
                 sprite.Draw(spriteBatch);

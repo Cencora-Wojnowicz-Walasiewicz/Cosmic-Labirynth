@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,8 @@ namespace Cosmic_Labirynth.Misc
         {
             int TileWidth = texture.Width / TileCols;
             int TileHeight = texture.Height / TileRows;
-            //                        0          2
             int column = GetColumn(TileType, TileCols);
-            int row = GetRow(TileType, TileCols);// 32        0
+            int row = GetRow(TileType, TileCols);
             Rectangle rectangle = new Rectangle(TileWidth * column, TileHeight * row, TileWidth, TileHeight);
             return rectangle;
         }
@@ -32,13 +32,11 @@ namespace Cosmic_Labirynth.Misc
         }
 
         #region Functions
-        //                            0           2
         private int GetColumn(int tileNumber, int columns)
         {
             int tmp = tileNumber;
             while (tmp - columns >= 0)
                 tmp -= columns;
-            Console.WriteLine(tmp);
             return tmp;
         }
 

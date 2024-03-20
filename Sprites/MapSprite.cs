@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,6 @@ namespace Cosmic_Labirynth.Sprites
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-
             Position += Velocity;
             Velocity = Vector2.Zero;
         }
