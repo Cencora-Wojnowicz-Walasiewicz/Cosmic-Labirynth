@@ -1,3 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/MapTest.png","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/MapTest.xnb","TextureProcessor","Texture2DContent",4446,8277,0,1108043
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/PlayerTest.png","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/PlayerTest.xnb","TextureProcessor","Texture2DContent",3383,4181,0,0016906
+"A:/GIT/Cosmic-Labirynth/Content/map1.png","A:/GIT/Cosmic-Labirynth/Content/bin/DesktopGL/map1.xnb","TextureProcessor","Texture2DContent",11221,451669,0,1278749
+"A:/GIT/Cosmic-Labirynth/Content/MapTest.png","A:/GIT/Cosmic-Labirynth/Content/bin/DesktopGL/MapTest.xnb","TextureProcessor","Texture2DContent",4446,8277,0,0012258
+"A:/GIT/Cosmic-Labirynth/Content/PlayerTest.png","A:/GIT/Cosmic-Labirynth/Content/bin/DesktopGL/PlayerTest.xnb","TextureProcessor","Texture2DContent",3383,4181,0,0008803

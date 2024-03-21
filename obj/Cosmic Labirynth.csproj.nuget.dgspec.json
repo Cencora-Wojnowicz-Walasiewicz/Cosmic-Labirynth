@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS programy\\Cosmic Labirynth\\Cosmic-Labirynth\\Cosmic Labirynth.csproj": {}
+    "A:\\GIT\\Cosmic-Labirynth\\Cosmic Labirynth.csproj": {}
   },
   "projects": {
-    "D:\\VS programy\\Cosmic Labirynth\\Cosmic-Labirynth\\Cosmic Labirynth.csproj": {
+    "A:\\GIT\\Cosmic-Labirynth\\Cosmic Labirynth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS programy\\Cosmic Labirynth\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
+        "projectUniqueName": "A:\\GIT\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
         "projectName": "Cosmic Labirynth",
-        "projectPath": "D:\\VS programy\\Cosmic Labirynth\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
-        "packagesPath": "C:\\Users\\Antek\\.nuget\\packages\\",
-        "outputPath": "D:\\VS programy\\Cosmic Labirynth\\Cosmic-Labirynth\\obj\\",
+        "projectPath": "A:\\GIT\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
+        "packagesPath": "C:\\Users\\GAME PC\\.nuget\\packages\\",
+        "outputPath": "A:\\GIT\\Cosmic-Labirynth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Programy\\VisualStudio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Antek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GAME PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -74,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
