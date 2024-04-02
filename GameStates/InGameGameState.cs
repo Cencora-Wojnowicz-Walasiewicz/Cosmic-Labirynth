@@ -21,7 +21,7 @@ namespace Cosmic_Labirynth.GameStates
 
         private List<Sprite> _sprites;
         private MapHandler _mapHandler = new MapHandler();
-        private float _Scale = 3f;
+        private float _Scale = 1f;
 
         private Input _Input;
 
