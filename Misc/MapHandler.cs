@@ -17,7 +17,7 @@ namespace Cosmic_Labirynth.Misc
             int TileHeight = texture.Height / TileRows;
             int column = GetColumn(TileType, TileCols);
             int row = GetRow(TileType, TileCols);
-            Rectangle rectangle = new Rectangle(TileWidth * column, TileHeight * row, TileWidth, TileHeight);
+            Rectangle rectangle = new Rectangle(TileWidth * column+1, TileHeight * row+1, TileWidth-2, TileHeight-2);
             return rectangle;
         }
 
@@ -26,8 +26,8 @@ namespace Cosmic_Labirynth.Misc
             int TileWidth = texture.Width / TileCols;
             int TileHeight = texture.Height / TileRows;
             int currentRow = GetRow(TileNumber, MapCols);
-            Vector2 position = new Vector2((TileNumber - (currentRow * MapCols)) * TileWidth * Scale,
-                        currentRow * TileHeight * Scale);
+            Vector2 position = new Vector2((TileNumber - (currentRow * MapCols)) * (TileWidth-2) * Scale,
+                        currentRow * (TileHeight-2) * Scale);
             return position;
         }
 

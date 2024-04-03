@@ -68,15 +68,6 @@ namespace Cosmic_Labirynth.GameStates
         {
             foreach (var component in _components)
                 component.Update(gameTime);
-
-            // if (Keyboard.GetState().IsKeyDown(Keys.Space))
-            //   GameStateManager.Instance.ChangeScreen(new InGameGameState(_graphicsDevice));
-
-            //   if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-            // {
-            //   GameStateManager.Instance.ClearScreens();
-            // GameStateManager.Instance.CloseGame();
-            //}
         }
 
         public override void Draw(SpriteBatch spriteBatch)

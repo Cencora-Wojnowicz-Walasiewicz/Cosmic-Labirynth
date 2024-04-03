@@ -21,7 +21,7 @@ namespace Cosmic_Labirynth.GameStates
 
         private List<Sprite> _sprites;
         private MapHandler _mapHandler = new MapHandler();
-        private float _Scale = 1f;
+        private float _Scale = 2f;
 
         private Input _Input;
 
@@ -91,10 +91,10 @@ namespace Cosmic_Labirynth.GameStates
             }
 
             // Dodanie gracza
-            _sprites.Add(new Player(playerTexture, new Vector2(0, 0))
+            _sprites.Add(new Player(playerTexture, new Vector2(32*_Scale, 32*_Scale))
             {
                 Input = _Input,
-                Speed = 3.0f,
+                Speed = 2.0f*_Scale,
                 Scale = _Scale
             });
         }

@@ -4,14 +4,12 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Gaminig/Source/Repos/Cencora-Wojnowicz-Walasiewicz/Cosmic-Labirynth/Content/Control/Button.png</File>
-    <File>C:/Users/Gaminig/Source/Repos/Cencora-Wojnowicz-Walasiewicz/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
-    <File>C:/Users/Gaminig/Source/Repos/Cencora-Wojnowicz-Walasiewicz/Cosmic-Labirynth/Content/map1.png</File>
-    <File>C:/Users/Gaminig/Source/Repos/Cencora-Wojnowicz-Walasiewicz/Cosmic-Labirynth/Content/MapTest.png</File>
-    <File>C:/Users/Gaminig/Source/Repos/Cencora-Wojnowicz-Walasiewicz/Cosmic-Labirynth/Content/PlayerTest.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Control/Button.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/PlayerTest.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
