@@ -10,6 +10,9 @@ namespace Cosmic_Labirynth.Sprites
 {
     public class Enemy : Sprite
     {
+        int MovementCounter = 60;
+        Random random = new Random();
+
         public override Rectangle Rectangle
         {
             get
@@ -40,13 +43,27 @@ namespace Cosmic_Labirynth.Sprites
         }
         public override void Move() // zmiana pozycji na mapie objektu
         {
-            PositionOnMap += Velocity;
+            Position += Velocity;
             Velocity = Vector2.Zero;
         }
 
         public override void SetEntityMove(List<Sprite> sprites) // ustawienie kierunku w którym ma poruszać się objekt
         {
             // wyznaczenie kierunku ruchu gracza na podstawie klawisza // tu by było miejsce na wyznaczenie ruchu dla NPC jeśli by były
+            MovementCounter++;
+            if(MovementCounter > 60)
+            {
+                int rand1 = random.Next(3);
+                int rand2 = random.Next(3);
+                MovementCounter = 0;
+                if(rand1 == 0) { preVelocity.X = -Speed;  } else if(rand1 == 1) {  preVelocity.X = 0; } else if(rand1 == 2) {  preVelocity.X = Speed; }
+                if (rand2 == 0) { preVelocity.Y = -Speed; } else if (rand2 == 1) { preVelocity.Y = 0; } else if (rand2 == 2) { preVelocity.Y = Speed; }
+            }
+
+            //random.Next(3);
+
+          
+
 
 
             // sprawdzanie kolizji
@@ -56,13 +73,14 @@ namespace Cosmic_Labirynth.Sprites
                     continue;
                 if (sprite.Collision)
                 {
-                    if ((this.Velocity.X > 0 && this.IsTouchingLeft(sprite)) || (this.Velocity.X < 0 && this.IsTouchingRight(sprite)))
-                        this.Velocity.X = 0;
+                    if ((this.preVelocity.X > 0 && this.IsTouchingLeft(sprite)) || (this.preVelocity.X < 0 && this.IsTouchingRight(sprite)))
+                        this.preVelocity.X = 0;
 
-                    if ((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) || (this.Velocity.Y < 0 && this.IsTouchingBottom(sprite)))
-                        this.Velocity.Y = 0;
+                    if ((this.preVelocity.Y > 0 && this.IsTouchingTop(sprite)) || (this.preVelocity.Y < 0 && this.IsTouchingBottom(sprite)))
+                        this.preVelocity.Y = 0;
                 }
             }
+            Velocity += preVelocity;
         }
 
     }

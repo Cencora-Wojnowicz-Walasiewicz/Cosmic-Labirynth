@@ -97,10 +97,18 @@ namespace Cosmic_Labirynth.GameStates
                 Speed = 2.0f*_Scale,
                 Scale = _Scale
             });
-            _sprites.Add(new Enemy(playerTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
+           
+            _sprites.Add(new Enemy(playerTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
             {
                
-                Speed = 2.0f * _Scale,
+                Speed = 1.0f * _Scale,
+                Scale = _Scale
+            });
+           
+            _sprites.Add(new Enemy(playerTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
+            {
+
+                Speed = 1.0f * _Scale,
                 Scale = _Scale
             });
         }
