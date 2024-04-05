@@ -52,8 +52,9 @@ namespace Cosmic_Labirynth.GameStates
             // Wczytanie danych mapy
             JObject mdata = JObject.Parse(File.ReadAllText(@"..\..\..\Maps\map1.json"));
             MapData mapData = JsonConvert.DeserializeObject<MapData>(mdata.ToString());
-            var playerTexture = content.Load<Texture2D>("PlayerTest");
+            var playerTexture = content.Load<Texture2D>("Tilesets/Player1");
             var mapTileset = content.Load<Texture2D>(mapData.tilesetName);
+            var enemyTexture = content.Load<Texture2D>("PlayerTest");
 
             _sprites = new List<Sprite>();
 
@@ -98,14 +99,14 @@ namespace Cosmic_Labirynth.GameStates
                 Scale = _Scale
             });
            
-            _sprites.Add(new Enemy(playerTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
+            _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
             {
                
                 Speed = 1.0f * _Scale,
                 Scale = _Scale
             });
            
-            _sprites.Add(new Enemy(playerTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
+            _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
             {
 
                 Speed = 1.0f * _Scale,

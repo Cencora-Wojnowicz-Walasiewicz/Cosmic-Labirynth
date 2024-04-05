@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\sprites\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\gamestates\\ingamegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:gamestates\\ingamegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\gamestates\\titlegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:gamestates\\titlegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\sprites\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\misc\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:misc\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\sprites\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\maps\\map1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:maps\\map1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\sprites\\mapsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\mapsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\misc\\maphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:misc\\maphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\cosmic-labirynth\\content\\tilesets\\player1.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:content\\tilesets\\player1.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,117 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Player1.png",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Content\\Tilesets\\Player1.png",
+              "RelativeDocumentMoniker": "Content\\Tilesets\\Player1.png",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Content\\Tilesets\\Player1.png",
+              "RelativeToolTip": "Content\\Tilesets\\Player1.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-04-05T18:37:23.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Input.cs",
               "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Misc\\Input.cs",
               "RelativeDocumentMoniker": "Misc\\Input.cs",
               "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Misc\\Input.cs",
               "RelativeToolTip": "Misc\\Input.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:51:14.515Z"
+              "WhenOpened": "2024-03-21T10:51:14.515Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TitleGameState.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\GameStates\\TitleGameState.cs",
-              "RelativeDocumentMoniker": "GameStates\\TitleGameState.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\GameStates\\TitleGameState.cs",
-              "RelativeToolTip": "GameStates\\TitleGameState.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:31:18.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Sprites\\Player.cs",
               "RelativeDocumentMoniker": "Sprites\\Player.cs",
               "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Sprites\\Player.cs",
               "RelativeToolTip": "Sprites\\Player.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAqAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAqwHUAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T10:23:59.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Sprite.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Sprites\\Sprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Sprite.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Sprites\\Sprite.cs",
-              "RelativeToolTip": "Sprites\\Sprite.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAcwBoAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:23:59.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "InGameGameState.cs",
               "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\GameStates\\InGameGameState.cs",
               "RelativeDocumentMoniker": "GameStates\\InGameGameState.cs",
               "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\GameStates\\InGameGameState.cs",
               "RelativeToolTip": "GameStates\\InGameGameState.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAwwFIAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T10:24:01.329Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "map1.json",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Maps\\map1.json",
-              "RelativeDocumentMoniker": "Maps\\map1.json",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Maps\\map1.json",
-              "RelativeToolTip": "Maps\\map1.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-21T10:23:59.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MapSprite.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Sprites\\MapSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\MapSprite.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Sprites\\MapSprite.cs",
-              "RelativeToolTip": "Sprites\\MapSprite.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAACIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:23:59.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MapHandler.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Misc\\MapHandler.cs",
-              "RelativeDocumentMoniker": "Misc\\MapHandler.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Misc\\MapHandler.cs",
-              "RelativeToolTip": "Misc\\MapHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:23:59.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Game1.cs",
-              "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\Cosmic-Labirynth\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAcwA4AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:24:01.644Z"
             }
           ]
         }

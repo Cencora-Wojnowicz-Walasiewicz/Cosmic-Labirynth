@@ -8,8 +8,10 @@
     <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
     <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/PlayerTest.png</File>
     <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png</File>
+    <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Tilesets/Player1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

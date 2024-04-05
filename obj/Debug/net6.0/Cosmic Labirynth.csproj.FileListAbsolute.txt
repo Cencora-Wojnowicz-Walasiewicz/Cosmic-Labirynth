@@ -150,3 +150,4 @@ C:\Users\mikol\Desktop\Cosmic-Labirynth\obj\Debug\net6.0\refint\Cosmic Labirynth
 C:\Users\mikol\Desktop\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.pdb
 C:\Users\mikol\Desktop\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.genruntimeconfig.cache
 C:\Users\mikol\Desktop\Cosmic-Labirynth\obj\Debug\net6.0\ref\Cosmic Labirynth.dll
+C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Player1.xnb
