@@ -4,10 +4,10 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Control/Button.png</File>
-    <File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
-    <File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/PlayerTest.png</File>
-    <File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png</File>
+    <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Control/Button.png</File>
+    <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
+    <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/PlayerTest.png</File>
+    <File>C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

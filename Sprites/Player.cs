@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
+using System.ComponentModel.Design;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Cosmic_Labirynth.Sprites
 {
     public class Player : Sprite
     {
+        public int Rows = 4;
+        public int Columns = 3;
+        private int currentFrame;
+        private int currentRow;
+        private int baseFrame = 1;
+        private float frameCounter = 0.0f;
+        private bool Switcher = true;
         public override Rectangle Rectangle
         {
             get
@@ -27,6 +36,19 @@ namespace Cosmic_Labirynth.Sprites
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
+            if (Velocity!=Vector2.Zero)
+            {
+                if (frameCounter >= 20)
+                {
+                    frameCounter = 0;
+                    NextFrame();
+                }
+                frameCounter += Speed;
+            }
+            else
+            {
+                currentFrame = baseFrame;
+            }
             Position += Velocity;
             Velocity = Vector2.Zero;
         }

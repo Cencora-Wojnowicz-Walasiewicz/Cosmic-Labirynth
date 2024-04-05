@@ -1,1 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Control/Button.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Content/Control/Button.xnb","TextureProcessor","Texture2DContent",324,25685,0,2872633
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Fonts/Font.spritefont","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Content/Fonts/Font.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0,1529263
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/PlayerTest.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Content/PlayerTest.xnb","TextureProcessor","Texture2DContent",3383,4181,0,0015626
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Content/Tilesets/mapTileset1.xnb","TextureProcessor","Texture2DContent",9058,74069,0,0024438
