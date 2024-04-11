@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cosmic Labirynth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3376e67c37930fb261dd3fd8435d64f93c764ad2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1d23cef9492e80246c37c316a1d8307d8721eb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cosmic Labirynth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cosmic Labirynth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

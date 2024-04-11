@@ -48,11 +48,11 @@ namespace Cosmic_Labirynth.Sprites
             Velocity = -moveVector;
         }
 
-        public override void Move() // zmiana pozycji na mapie objektu
+        /*public override void Move() // zmiana pozycji na mapie objektu
         {
             PositionOnMap += Velocity;
             Velocity = Vector2.Zero;
-        }
+        }*/
 
         public override void Movement() // ustawienie pozycji z mapy do pozycji wyświetlanej
         {

@@ -21,6 +21,7 @@ namespace Cosmic_Labirynth.Sprites
         private int baseFrame = 1;
         private float frameCounter = 0.0f;
         private bool Switcher = true;
+        Vector2 PositionOnMapTMP = Vector2.Zero;
         public override Rectangle Rectangle
         {
             get
@@ -32,11 +33,12 @@ namespace Cosmic_Labirynth.Sprites
         {
             Position = position;
             PositionOnMap = position;
+            PositionOnMapTMP = position;
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-            if (Velocity!=Vector2.Zero)
+            if (PositionOnMap != PositionOnMapTMP)
             {
                 if (frameCounter >= 20)
                 {
@@ -44,6 +46,7 @@ namespace Cosmic_Labirynth.Sprites
                     NextFrame();
                 }
                 frameCounter += Speed;
+                PositionOnMapTMP =  PositionOnMap;
             }
             else
             {
@@ -52,6 +55,18 @@ namespace Cosmic_Labirynth.Sprites
             Position += Velocity;
             Velocity = Vector2.Zero;
         }
+        
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            int width = _texture.Width / Columns;
+            int height = _texture.Height / Rows;
+            int row = currentRow; // kierunek animacji
+            int column = currentFrame; // klatka animacji
+
+            Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
+            spriteBatch.Draw(_texture, Position, sourceRectangle, Color.White, 0, new Vector2(0, 0), Scale, SpriteEffects.None, 1.0f);
+        }
+        
         private void NextFrame()
         {
             switch (currentFrame)
@@ -82,16 +97,6 @@ namespace Cosmic_Labirynth.Sprites
                     }
             }
         }
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            int width = _texture.Width / Columns;
-            int height = _texture.Height / Rows;
-            int row = currentRow; // kierunek animacji
-            int column = currentFrame; // klatka animacji
-
-            Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
-            spriteBatch.Draw(_texture, Position, sourceRectangle, Color.White, 0, new Vector2(0, 0), Scale, SpriteEffects.None, 1.0f);
-        }
 
         public override void SetEntityMove(List<Sprite> sprites) // ustawienie kierunku w którym ma poruszać się objekt
         {
@@ -106,12 +111,12 @@ namespace Cosmic_Labirynth.Sprites
                 Velocity.X = Speed;
                 currentRow = 1;
             }
+            
             if (Keyboard.GetState().IsKeyDown(Input.Up))
             {
                 Velocity.Y = -Speed;
                 currentRow = 0;
-            }
-                
+            } 
             else if (Keyboard.GetState().IsKeyDown(Input.Down))
             {
                 Velocity.Y = Speed;

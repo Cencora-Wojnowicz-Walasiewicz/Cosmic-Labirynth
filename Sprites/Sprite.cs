@@ -15,7 +15,6 @@ namespace Cosmic_Labirynth.Sprites
         public Vector2 Position; // miejsce gdzie się wyświetla objekt
         public Vector2 PositionOnMap;
         public Vector2 Velocity;
-        public Vector2 preVelocity;
         public float Speed;
         public Input Input;
         public bool Collision = true;

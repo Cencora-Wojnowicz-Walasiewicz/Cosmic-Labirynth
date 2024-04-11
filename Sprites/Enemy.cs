@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Cosmic_Labirynth.Sprites
 {
@@ -12,6 +13,7 @@ namespace Cosmic_Labirynth.Sprites
     {
         int MovementCounter = 60;
         Random random = new Random();
+        public Vector2 preVelocity;
 
         public override Rectangle Rectangle
         {
@@ -39,13 +41,13 @@ namespace Cosmic_Labirynth.Sprites
 
         public override void SetMapMove(Vector2 moveVector) // ustawienie kierunku w którym ma poruszać się objekt
         {
-            Velocity = -moveVector;
+            Velocity += -moveVector;
         }
-        public override void Move() // zmiana pozycji na mapie objektu
+        /*public override void MoveEntity(List<Sprite> sprites, int screenWidth, int screenHeight, Rectangle map) // zmiana pozycji na mapie objektu
         {
             Position += Velocity;
             Velocity = Vector2.Zero;
-        }
+        }*/
 
         public override void SetEntityMove(List<Sprite> sprites) // ustawienie kierunku w którym ma poruszać się objekt
         {
@@ -59,12 +61,6 @@ namespace Cosmic_Labirynth.Sprites
                 if(rand1 == 0) { preVelocity.X = -Speed;  } else if(rand1 == 1) {  preVelocity.X = 0; } else if(rand1 == 2) {  preVelocity.X = Speed; }
                 if (rand2 == 0) { preVelocity.Y = -Speed; } else if (rand2 == 1) { preVelocity.Y = 0; } else if (rand2 == 2) { preVelocity.Y = Speed; }
             }
-
-            //random.Next(3);
-
-          
-
-
 
             // sprawdzanie kolizji
             foreach (var sprite in sprites)
