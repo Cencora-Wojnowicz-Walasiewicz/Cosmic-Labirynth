@@ -20,6 +20,8 @@ namespace Cosmic_Labirynth.Sprites
         public bool Collision = true;
         public float Scale;
         public float BorderDistance = 128f;
+
+        public bool IsEnemy = false;
         public virtual Rectangle Rectangle
         {
             get
@@ -56,6 +58,9 @@ namespace Cosmic_Labirynth.Sprites
         { }
 
         public virtual void Movement() // ustawienie pozycji z mapy do pozycji wyświetlanej
+        { }
+
+        public virtual void EventChecker(List<Sprite> sprites) // sprawdzanie eventów
         { }
 
         #region Collision

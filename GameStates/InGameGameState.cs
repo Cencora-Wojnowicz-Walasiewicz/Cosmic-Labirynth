@@ -92,12 +92,22 @@ namespace Cosmic_Labirynth.GameStates
             }
 
             // Dodanie gracza
-            _sprites.Add(new Player(playerTexture, new Vector2(32*_Scale, 32*_Scale))
+            //_sprites.Add(new Player(playerTexture, new Vector2(32*_Scale, 32*_Scale))
+            //{
+            //    Input = _Input,
+            //    Speed = 2.0f*_Scale,
+            //    Scale = _Scale
+            //});
+            Player player = new Player(playerTexture, new Vector2(32 * _Scale, 32 * _Scale))
             {
                 Input = _Input,
-                Speed = 2.0f*_Scale,
+                Speed = 2.0f * _Scale,
                 Scale = _Scale
-            });
+            };
+
+            player.OnEnemyCollision += Player_OnEnemyCollision;
+
+            _sprites.Add(player);
            
             _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
             {
@@ -112,6 +122,11 @@ namespace Cosmic_Labirynth.GameStates
                 Speed = 1.0f * _Scale,
                 Scale = _Scale
             });
+        }
+
+        private void Player_OnEnemyCollision(object sender, EventArgs e)
+        {
+            GameStateManager.Instance.ChangeScreen(new GameOverGameState(_graphicsDevice));
         }
 
         public override void UnloadContent()
@@ -132,6 +147,10 @@ namespace Cosmic_Labirynth.GameStates
             // Zaktualizowanie wszystkich pozycji
             foreach (var sprite in _sprites)
                 sprite.Update(gameTime, _sprites);
+
+            // Sprawdzanie eventów
+            foreach (var sprite in _sprites)
+                sprite.EventChecker(_sprites);
         }
 
         public override void Draw(SpriteBatch spriteBatch)

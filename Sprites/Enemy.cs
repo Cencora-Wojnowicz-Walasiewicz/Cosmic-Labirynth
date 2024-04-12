@@ -26,6 +26,7 @@ namespace Cosmic_Labirynth.Sprites
         {
             Position = position;
             PositionOnMap = position;
+            IsEnemy = true;
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
@@ -78,6 +79,11 @@ namespace Cosmic_Labirynth.Sprites
             }
             Velocity += preVelocity;
         }
+
+        //public override void EventChecker(List<Sprite> sprites)
+        //{
+        //    //
+        //}
 
     }
 }

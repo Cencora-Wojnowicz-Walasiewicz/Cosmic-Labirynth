@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
 using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics;
 
 namespace Cosmic_Labirynth.Sprites
 {
@@ -22,6 +23,9 @@ namespace Cosmic_Labirynth.Sprites
         private float frameCounter = 0.0f;
         private bool Switcher = true;
         Vector2 PositionOnMapTMP = Vector2.Zero;
+
+        public event EventHandler OnEnemyCollision;
+
         public override Rectangle Rectangle
         {
             get
@@ -238,6 +242,22 @@ namespace Cosmic_Labirynth.Sprites
 
             }
 
+        }
+
+        public override void EventChecker(List<Sprite> sprites)
+        {
+            
+            foreach (var sprite in sprites)
+            {
+                
+                if(sprite.IsEnemy)
+                {
+                    if(this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite))
+                    {
+                        OnEnemyCollision?.Invoke(this, EventArgs.Empty);
+                    }
+                }
+            }
         }
     }
 }
