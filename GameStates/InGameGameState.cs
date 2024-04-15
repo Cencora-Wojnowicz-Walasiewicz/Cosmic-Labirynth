@@ -18,6 +18,7 @@ namespace Cosmic_Labirynth.GameStates
 {
     public class InGameGameState : GameState
     {
+        ///////////////////////////////////////////////////   DECLARATIONS   /////////////////////////////////////////////
 
         private List<Sprite> _sprites;
         private MapHandler _mapHandler = new MapHandler();
@@ -36,6 +37,8 @@ namespace Cosmic_Labirynth.GameStates
             _screenWidth = GameStateManager.Instance._graphics.PreferredBackBufferWidth;
         }
 
+        ///////////////////////////////////////////////////   INITIALIZATION AND LOADING   /////////////////////////////////////////////
+        #region Initialisation and Loading
         public override void Initialize()
         {
             _Input = new Input
@@ -102,7 +105,8 @@ namespace Cosmic_Labirynth.GameStates
             {
                 Input = _Input,
                 Speed = 2.0f * _Scale,
-                Scale = _Scale
+                Scale = _Scale,
+                HP = 3
             };
 
             player.OnEnemyCollision += Player_OnEnemyCollision;
@@ -111,29 +115,45 @@ namespace Cosmic_Labirynth.GameStates
            
             _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
             {
-               
                 Speed = 1.0f * _Scale,
                 Scale = _Scale
             });
            
             _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
             {
-
                 Speed = 1.0f * _Scale,
                 Scale = _Scale
             });
         }
-
-        private void Player_OnEnemyCollision(object sender, EventArgs e)
-        {
-            GameStateManager.Instance.ChangeScreen(new GameOverGameState(_graphicsDevice));
-        }
-
+        
         public override void UnloadContent()
         {
             //
         }
+        #endregion
 
+        ////////////////////////////////////////////   EVENTS EXECUTION   ///////////////////////////////////////////////////////
+        #region Events Execution
+        private void Player_OnEnemyCollision(object sender, EventArgs e)
+        {
+            foreach (var sprite in _sprites)
+            {
+                if (sprite is Player)
+                {
+                    if ((sprite as Player).AttackDelay <= 0)
+                    {
+                        (sprite as Player).AttackDelay = 120;
+                        (sprite as Player).HP--;
+                    }
+                    Debug.Print(((sprite as Player).HP).ToString());
+                    if((sprite as Player).HP < 1)(sprite as Player).EventExecuter(_graphicsDevice);
+                }
+            }
+        }
+        #endregion
+
+        //////////////////////////////////////////   UPDATE AND DRAW   ////////////////////////////////////////////////////////////
+        #region Update and Draw
         public override void Update(GameTime gameTime)
         {
             // Wyznaczenie jak Entity mają iść i sprawdzenie kolizji // nadanie Velocity dla Player
@@ -161,5 +181,6 @@ namespace Cosmic_Labirynth.GameStates
                 sprite.Draw(spriteBatch);
             spriteBatch.End();
         }
+        #endregion
     }
 }

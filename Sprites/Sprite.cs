@@ -63,6 +63,9 @@ namespace Cosmic_Labirynth.Sprites
         public virtual void EventChecker(List<Sprite> sprites) // sprawdzanie eventów
         { }
 
+        public virtual void EventExecuter() // wykonywanie eventów
+        { }
+
         #region Collision
         protected bool IsTouchingLeft(Sprite sprite)
         {

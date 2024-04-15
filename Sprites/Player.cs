@@ -10,19 +10,28 @@ using static System.Formats.Asn1.AsnWriter;
 using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics;
+using Cosmic_Labirynth.GameStates;
 
 namespace Cosmic_Labirynth.Sprites
 {
     public class Player : Sprite
     {
+        //////////////////////// PARAMETRS //////////////////////////
+        #region Parametrs
+        public int HP;
+        #endregion
+
+        //////////////////////////// PROPERTIES //////////////////////
+        #region Properties 
         public int Rows = 4;
         public int Columns = 3;
         private int currentFrame;
         private int currentRow;
         private int baseFrame = 1;
         private float frameCounter = 0.0f;
-        private bool Switcher = true;
+        private bool Switcher = true; // parametr od animacji
         Vector2 PositionOnMapTMP = Vector2.Zero;
+        public int AttackDelay = 0;
 
         public event EventHandler OnEnemyCollision;
 
@@ -33,6 +42,7 @@ namespace Cosmic_Labirynth.Sprites
                 return new Rectangle((int)Position.X, (int)Position.Y, 32 * (int)Scale, 32 * (int)Scale);
             }
         }
+        #endregion
         public Player(Texture2D texture, Vector2 position) : base(texture)
         {
             Position = position;
@@ -40,6 +50,8 @@ namespace Cosmic_Labirynth.Sprites
             PositionOnMapTMP = position;
         }
 
+        //////////////////////////////// METHODS //////////////////////////////////////
+        #region Methods
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
             if (PositionOnMap != PositionOnMapTMP)
@@ -243,10 +255,14 @@ namespace Cosmic_Labirynth.Sprites
             }
 
         }
+        #endregion
 
+        //////////////////////////////////////////////////////////// EVENTS ///////////////////////////////////////////////////////////////
+        #region Event Methods
         public override void EventChecker(List<Sprite> sprites)
         {
-            
+            if(AttackDelay > 0) AttackDelay--;
+                
             foreach (var sprite in sprites)
             {
                 
@@ -259,5 +275,16 @@ namespace Cosmic_Labirynth.Sprites
                 }
             }
         }
+
+        public override void EventExecuter()
+        {
+            //
+        }
+        public void EventExecuter(GraphicsDevice graphicsDevice)
+        {
+            Debug.Print("Wykryto śmierć gracza!");
+            GameStateManager.Instance.ChangeScreen(new GameOverGameState(graphicsDevice));
+        }
+        #endregion
     }
 }
