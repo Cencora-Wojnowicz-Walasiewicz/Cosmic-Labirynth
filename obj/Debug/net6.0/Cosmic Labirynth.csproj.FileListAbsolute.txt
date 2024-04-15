@@ -152,3 +152,4 @@ C:\Users\mikol\Desktop\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.genrun
 C:\Users\mikol\Desktop\Cosmic-Labirynth\obj\Debug\net6.0\ref\Cosmic Labirynth.dll
 C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Player1.xnb
 D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Player1.xnb
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\heart.xnb

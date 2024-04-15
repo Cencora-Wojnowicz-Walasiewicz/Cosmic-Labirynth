@@ -31,6 +31,8 @@ namespace Cosmic_Labirynth.GameStates
         private int _screenHeight;
         private int _screenWidth;
 
+        PlayerLifeInterface _playerLife;
+
         public InGameGameState(GraphicsDevice graphicsDevice) : base(graphicsDevice)
         {
             _screenHeight = GameStateManager.Instance._graphics.PreferredBackBufferHeight;
@@ -58,9 +60,12 @@ namespace Cosmic_Labirynth.GameStates
             var playerTexture = content.Load<Texture2D>("Tilesets/Player1");
             var mapTileset = content.Load<Texture2D>(mapData.tilesetName);
             var enemyTexture = content.Load<Texture2D>("PlayerTest");
+            var heartTexture = content.Load<Texture2D>("Tilesets/heart");
+
+            _playerLife = new PlayerLifeInterface(heartTexture);
 
             _sprites = new List<Sprite>();
-
+            
             // Wyznaczanie wielkości mapy
             Map = new Rectangle(0, 0, mapData.mapCols * 32 * (int)_Scale, mapData.mapRows * 32 * (int)_Scale);
 
@@ -95,12 +100,6 @@ namespace Cosmic_Labirynth.GameStates
             }
 
             // Dodanie gracza
-            //_sprites.Add(new Player(playerTexture, new Vector2(32*_Scale, 32*_Scale))
-            //{
-            //    Input = _Input,
-            //    Speed = 2.0f*_Scale,
-            //    Scale = _Scale
-            //});
             Player player = new Player(playerTexture, new Vector2(32 * _Scale, 32 * _Scale))
             {
                 Input = _Input,
@@ -110,15 +109,16 @@ namespace Cosmic_Labirynth.GameStates
             };
 
             player.OnEnemyCollision += Player_OnEnemyCollision;
+            _playerLife.UpdatePlayerLife(player.HP);
 
             _sprites.Add(player);
-           
+
             _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
             {
                 Speed = 1.0f * _Scale,
                 Scale = _Scale
             });
-           
+
             _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
             {
                 Speed = 1.0f * _Scale,
@@ -144,6 +144,7 @@ namespace Cosmic_Labirynth.GameStates
                     {
                         (sprite as Player).AttackDelay = 120;
                         (sprite as Player).HP--;
+                        _playerLife.UpdatePlayerLife((sprite as Player).HP);
                     }
                     Debug.Print(((sprite as Player).HP).ToString());
                     if((sprite as Player).HP < 1)(sprite as Player).EventExecuter(_graphicsDevice);
@@ -178,7 +179,10 @@ namespace Cosmic_Labirynth.GameStates
             _graphicsDevice.Clear(Color.Red);
             spriteBatch.Begin();
             foreach (var sprite in _sprites)
+            {
                 sprite.Draw(spriteBatch);
+            }
+            _playerLife.Draw(spriteBatch);
             spriteBatch.End();
         }
         #endregion
