@@ -11,9 +11,11 @@ namespace Cosmic_Labirynth.Sprites
 {
     public class Enemy : Sprite
     {
+
         int MovementCounter = 60;
         Random random = new Random();
         public Vector2 preVelocity;
+        int ChaseRadius = 200;
 
         public override Rectangle Rectangle
         {
@@ -31,6 +33,7 @@ namespace Cosmic_Labirynth.Sprites
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
+            
             Position += Velocity;
             Velocity = Vector2.Zero;
         }
@@ -52,14 +55,30 @@ namespace Cosmic_Labirynth.Sprites
 
         public override void SetEntityMove(List<Sprite> sprites) // ustawienie kierunku w którym ma poruszać się objekt
         {
+            Player player = sprites.OfType<Player>().FirstOrDefault(); // Find the player in the sprites list
+            if (player != null)
+            {
+                Vector2 directionToPlayer = player.Position - this.Position;
+                float distanceToPlayer = directionToPlayer.Length();
+
+                // If the player is within the chase radius, chase the player
+                if (distanceToPlayer < ChaseRadius)
+                {
+                    // Set the movement direction to chase the player
+                    Velocity = Vector2.Normalize(directionToPlayer) * Speed;
+                    return; // No need to continue with random movement if chasing the player
+                }
+            }
+
+
             // wyznaczenie kierunku ruchu gracza na podstawie klawisza // tu by było miejsce na wyznaczenie ruchu dla NPC jeśli by były
             MovementCounter++;
-            if(MovementCounter > 60)
+            if (MovementCounter > 60)
             {
                 int rand1 = random.Next(3);
                 int rand2 = random.Next(3);
                 MovementCounter = 0;
-                if(rand1 == 0) { preVelocity.X = -Speed;  } else if(rand1 == 1) {  preVelocity.X = 0; } else if(rand1 == 2) {  preVelocity.X = Speed; }
+                if (rand1 == 0) { preVelocity.X = -Speed; } else if (rand1 == 1) { preVelocity.X = 0; } else if (rand1 == 2) { preVelocity.X = Speed; }
                 if (rand2 == 0) { preVelocity.Y = -Speed; } else if (rand2 == 1) { preVelocity.Y = 0; } else if (rand2 == 2) { preVelocity.Y = Speed; }
             }
 
@@ -87,5 +106,3 @@ namespace Cosmic_Labirynth.Sprites
 
     }
 }
-
-    
