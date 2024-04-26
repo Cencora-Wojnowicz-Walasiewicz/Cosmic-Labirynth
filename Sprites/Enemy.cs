@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+//using System.Numerics;
 
 namespace Cosmic_Labirynth.Sprites
 {
@@ -16,6 +17,9 @@ namespace Cosmic_Labirynth.Sprites
         Random random = new Random();
         public Vector2 preVelocity;
         int ChaseRadius = 200;
+        int Chasing = 0;
+
+        
 
         public override Rectangle Rectangle
         {
@@ -55,39 +59,33 @@ namespace Cosmic_Labirynth.Sprites
 
         public override void SetEntityMove(List<Sprite> sprites) // ustawienie kierunku w którym ma poruszać się objekt
         {
-            Player player = sprites.OfType<Player>().FirstOrDefault(); // Find the player in the sprites list
-            if (player != null)
-            {
-                Vector2 directionToPlayer = player.Position - this.Position;
-                float distanceToPlayer = directionToPlayer.Length();
+            // Player player = sprites.OfType<Player>().FirstOrDefault(); // Find the player in the sprites list
 
-                // If the player is within the chase radius, chase the player
-                if (distanceToPlayer < ChaseRadius)
+            //Vector2 directionToPlayer = player.Position - this.Position;
+            //float distanceToPlayer = directionToPlayer.Length();
+
+            Player player = sprites.OfType<Player>().FirstOrDefault();
+
+           Vector2 directionToPlayer = player.Position - this.Position;
+            float distanceToPlayer = directionToPlayer.Length();
+
+
+            // If the player is within the chase radius, chase the player
+            if (Chasing == 1)
                 {
                     // Set the movement direction to chase the player
-                    Velocity = Vector2.Normalize(directionToPlayer) * Speed;
+                    preVelocity = Vector2.Normalize(directionToPlayer) * Speed;
 
-                    // Check for collisions while chasing
-                    foreach (var sprite in sprites)
-                    {
-                        if (sprite == this)
-                            continue;
-                        if (sprite.Collision)
-                        {
-                            if ((this.Velocity.X > 0 && this.IsTouchingLeft(sprite)) || (this.Velocity.X < 0 && this.IsTouchingRight(sprite)))
-                                this.Velocity.X = 0;
+                   
+                   
 
-                            if ((this.Velocity.Y > 0 && this.IsTouchingTop(sprite)) || (this.Velocity.Y < 0 && this.IsTouchingBottom(sprite)))
-                                this.Velocity.Y = 0;
-                        }
-                    }
-
-                    return; // No need to continue with random movement if chasing the player
+                    //return; // No need to continue with random movement if chasing the player
                 }
-
-            }
-            else
-            {
+                else
+                { 
+            
+            
+           
 
 
                 // wyznaczenie kierunku ruchu gracza na podstawie klawisza // tu by było miejsce na wyznaczenie ruchu dla NPC jeśli by były
@@ -101,6 +99,7 @@ namespace Cosmic_Labirynth.Sprites
                     if (rand2 == 0) { preVelocity.Y = -Speed; } else if (rand2 == 1) { preVelocity.Y = 0; } else if (rand2 == 2) { preVelocity.Y = Speed; }
                 }
             }
+                
 
                 // sprawdzanie kolizji
                 foreach (var sprite in sprites)
@@ -119,10 +118,27 @@ namespace Cosmic_Labirynth.Sprites
                 Velocity += preVelocity;
             }
 
-            //public override void EventChecker(List<Sprite> sprites)
-            //{
-            //    //
-            //}
+            public override void EventChecker(List<Sprite> sprites)
+            {
+
+            Player player = sprites.OfType<Player>().FirstOrDefault();
+
+            Vector2 directionToPlayer = player.Position - this.Position;
+            float distanceToPlayer = directionToPlayer.Length();
+
+
+            if (distanceToPlayer < ChaseRadius) 
+            {
+                Chasing = 1;            
+            }
+            else
+            {
+                Chasing = 0;
+            }
+
+
+
+        }
 
         }
     }

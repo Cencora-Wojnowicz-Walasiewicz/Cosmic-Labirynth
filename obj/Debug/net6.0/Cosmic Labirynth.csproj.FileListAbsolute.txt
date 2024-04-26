@@ -158,3 +158,5 @@ C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Conte
 C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\heart.xnb
 C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet (1).xnb
 C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet (1).xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet.xnb
