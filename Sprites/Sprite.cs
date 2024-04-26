@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Input;
 
 namespace Cosmic_Labirynth.Sprites
 {
-    public class Sprite
+    public class Sprite : ICloneable
     {
         protected Texture2D _texture;
         public Vector2 Position; // miejsce gdzie się wyświetla objekt
@@ -20,6 +21,17 @@ namespace Cosmic_Labirynth.Sprites
         public bool Collision = true;
         public float Scale;
         public float BorderDistance = 128f;
+
+        protected KeyboardState _currentKey; 
+        protected KeyboardState _previousKey; 
+        protected float _rotation;
+        public Vector2 Origin;
+        public Vector2 Direction;
+        public Sprite Parent;
+        public float LifeSpan = 3f;
+        public float LinearVelocity = 3f;
+        public float RotationVelocity = 3f;
+        public bool IsRemoved = false;
 
         public bool IsEnemy = false;
         public virtual Rectangle Rectangle
@@ -33,6 +45,7 @@ namespace Cosmic_Labirynth.Sprites
         public Sprite(Texture2D texture)
         {
             _texture = texture;
+            Origin = new Vector2(_texture.Width / 2, _texture.Height / 2);
         }
 
         public virtual void Update(GameTime gameTime, List<Sprite> sprites)
@@ -43,6 +56,7 @@ namespace Cosmic_Labirynth.Sprites
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, Position, Color.White);
+
         }
 
         public virtual void SetMapMove(Vector2 moveVector) // ustawienie kierunku w którym ma poruszać się objekt
@@ -65,6 +79,10 @@ namespace Cosmic_Labirynth.Sprites
 
         public virtual void EventExecuter() // wykonywanie eventów
         { }
+        public object Clone ()  //możliwość wystrzelenia 2 poscisku bez ingerencji w istniejący
+        {
+            return this.MemberwiseClone();
+        }
 
         #region Collision
         protected bool IsTouchingLeft(Sprite sprite)

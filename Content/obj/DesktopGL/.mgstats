@@ -1,7 +1,9 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Control/Button.png","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/Control/Button.xnb","TextureProcessor","Texture2DContent",324,25685,0,1123697
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Fonts/Font.spritefont","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/Fonts/Font.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0,0867178
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/PlayerTest.png","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/PlayerTest.xnb","TextureProcessor","Texture2DContent",3383,4181,0,0018967
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/heart.png","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/Tilesets/heart.xnb","TextureProcessor","Texture2DContent",3655,4181,0,0015992
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/Tilesets/mapTileset1.xnb","TextureProcessor","Texture2DContent",9058,74069,0,0053375
-"D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Player1.png","D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/Tilesets/Player1.xnb","TextureProcessor","Texture2DContent",7665,49237,0,0025033
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Bullet (1).png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Bullet (1).xnb","TextureProcessor","Texture2DContent",189,185,0,1018489
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Bullet.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Bullet.xnb","TextureProcessor","Texture2DContent",189,185,0,0017901
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Control/Button.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Control/Button.xnb","TextureProcessor","Texture2DContent",324,25685,0,0021191
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Fonts/Font.spritefont","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Fonts/Font.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0,0787231
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/PlayerTest.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/PlayerTest.xnb","TextureProcessor","Texture2DContent",3383,4181,0,006139
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Tilesets/heart.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Tilesets/heart.xnb","TextureProcessor","Texture2DContent",3655,4181,0,0020172
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Tilesets/mapTileset1.xnb","TextureProcessor","Texture2DContent",9058,74069,0,0037258
+"C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/Tilesets/Player1.png","C:/Users/mikol/Desktop/Cosmic-Labirynth/Content/bin/DesktopGL/Tilesets/Player1.xnb","TextureProcessor","Texture2DContent",7665,49237,0,0040637

@@ -155,3 +155,6 @@ D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilese
 D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\heart.xnb
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\heart.xnb
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Player1.xnb
+C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\heart.xnb
+C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet (1).xnb
+C:\Users\mikol\Desktop\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet.xnb

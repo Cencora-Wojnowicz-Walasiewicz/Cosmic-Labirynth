@@ -19,6 +19,7 @@ namespace Cosmic_Labirynth.Sprites
         //////////////////////// PARAMETRS //////////////////////////
         #region Parametrs
         public int HP;
+        public Bullet Bullet;
         #endregion
 
         //////////////////////////// PROPERTIES //////////////////////
@@ -49,11 +50,20 @@ namespace Cosmic_Labirynth.Sprites
             PositionOnMap = position;
             PositionOnMapTMP = position;
         }
+       //public Player(Texture2D texture) : base(texture) {}
 
         //////////////////////////////// METHODS //////////////////////////////////////
         #region Methods
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
+            _previousKey = _currentKey;
+            _currentKey = Keyboard.GetState();
+
+            if (_currentKey.IsKeyDown(Keys.Space) &&
+                _previousKey.IsKeyUp(Keys.Space))
+            { 
+                AddBullet(sprites);
+            }
             if (PositionOnMap != PositionOnMapTMP)
             {
                 if (frameCounter >= 20)
@@ -71,7 +81,18 @@ namespace Cosmic_Labirynth.Sprites
             Position += Velocity;
             Velocity = Vector2.Zero;
         }
-        
+        private void AddBullet(List<Sprite> sprites)
+        {
+            var bullet = Bullet.Clone() as Bullet;
+            bullet.Direction = this.Direction;
+            bullet.Position = this.Position + new Vector2(16* Scale, 16* Scale);
+            bullet.LinearVelocity = this.LinearVelocity * 2;
+            bullet.LifeSpan = 2f;
+            bullet.Parent = this;
+
+            sprites.Add(bullet);
+        }
+
         public override void Draw(SpriteBatch spriteBatch)
         {
             int width = _texture.Width / Columns;
@@ -121,24 +142,30 @@ namespace Cosmic_Labirynth.Sprites
             { 
                 Velocity.X = -Speed;
                 currentRow = 3;
+                _rotation = MathHelper.Pi;
             } 
             else if (Keyboard.GetState().IsKeyDown(Input.Right))
             { 
                 Velocity.X = Speed;
                 currentRow = 1;
+                _rotation = 0; // 0 degrees (right)
             }
             
             if (Keyboard.GetState().IsKeyDown(Input.Up))
             {
                 Velocity.Y = -Speed;
                 currentRow = 0;
+                _rotation = -MathHelper.PiOver2; // -90 degrees (up)
             } 
             else if (Keyboard.GetState().IsKeyDown(Input.Down))
             {
                 Velocity.Y = Speed;
                 currentRow = 2;
+                _rotation = MathHelper.PiOver2; // 90 degrees (down)
             }
-                
+
+            Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
+
 
             // sprawdzanie kolizji
             foreach (var sprite in sprites)
@@ -256,7 +283,6 @@ namespace Cosmic_Labirynth.Sprites
 
         }
         #endregion
-
         //////////////////////////////////////////////////////////// EVENTS ///////////////////////////////////////////////////////////////
         #region Event Methods
         public override void EventChecker(List<Sprite> sprites)

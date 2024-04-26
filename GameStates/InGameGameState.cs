@@ -13,6 +13,8 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.IO;
 using System.Diagnostics;
+using System.IO.IsolatedStorage;
+using System.Reflection.Metadata;
 
 namespace Cosmic_Labirynth.GameStates
 {
@@ -62,6 +64,8 @@ namespace Cosmic_Labirynth.GameStates
             var enemyTexture = content.Load<Texture2D>("PlayerTest");
             var heartTexture = content.Load<Texture2D>("Tilesets/heart");
 
+
+
             _playerLife = new PlayerLifeInterface(heartTexture);
 
             _sprites = new List<Sprite>();
@@ -105,7 +109,10 @@ namespace Cosmic_Labirynth.GameStates
                 Input = _Input,
                 Speed = 2.0f * _Scale,
                 Scale = _Scale,
-                HP = 3
+                HP = 3,
+                Position = new Vector2(100, 100),
+                Bullet = new Bullet(content.Load<Texture2D>("Bullet")),
+
             };
 
             player.OnEnemyCollision += Player_OnEnemyCollision;
@@ -172,6 +179,17 @@ namespace Cosmic_Labirynth.GameStates
             // Sprawdzanie eventów
             foreach (var sprite in _sprites)
                 sprite.EventChecker(_sprites);
+
+            //Strzelanie bulletami
+            foreach (var sprite in _sprites.ToArray())
+                sprite.Update(gameTime, _sprites);
+
+            for(int i=0; i< _sprites.Count; i++)
+                if (_sprites[i].IsRemoved)
+                {
+                    _sprites.RemoveAt(i);
+                    i--;
+                }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
