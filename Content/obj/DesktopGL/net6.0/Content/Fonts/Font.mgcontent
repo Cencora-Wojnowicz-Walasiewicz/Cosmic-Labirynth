@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Fonts/Font.spritefont</SourceFile>
-  <SourceTime>2024-04-05T11:21:12.4565474+02:00</SourceTime>
-  <DestFile>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/bin/DesktopGL/Content/Fonts/Font.xnb</DestFile>
-  <DestTime>2024-04-26T18:40:44.239051+02:00</DestTime>
+  <SourceFile>C:/Users/user/Desktop/PROJECTS/Cosmic-Labirynth/Content/Fonts/Font.spritefont</SourceFile>
+  <SourceTime>2024-04-05T21:04:51.6002243+02:00</SourceTime>
+  <DestFile>C:/Users/user/Desktop/PROJECTS/Cosmic-Labirynth/Content/bin/DesktopGL/Content/Fonts/Font.xnb</DestFile>
+  <DestTime>2024-04-27T00:06:55.9472259+02:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

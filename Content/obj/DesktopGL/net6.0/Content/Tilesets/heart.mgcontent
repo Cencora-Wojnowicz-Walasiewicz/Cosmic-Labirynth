@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Tilesets/heart.png</SourceFile>
-  <SourceTime>2024-04-25T20:52:43.8037864+02:00</SourceTime>
-  <DestFile>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/bin/DesktopGL/Content/Tilesets/heart.xnb</DestFile>
-  <DestTime>2024-04-26T18:40:44.2430408+02:00</DestTime>
+  <SourceFile>C:/Users/user/Desktop/PROJECTS/Cosmic-Labirynth/Content/Tilesets/heart.png</SourceFile>
+  <SourceTime>2024-04-26T16:04:05.2887229+02:00</SourceTime>
+  <DestFile>C:/Users/user/Desktop/PROJECTS/Cosmic-Labirynth/Content/bin/DesktopGL/Content/Tilesets/heart.xnb</DestFile>
+  <DestTime>2024-04-27T00:06:55.9562243+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

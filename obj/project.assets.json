@@ -146,19 +146,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gaminig\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaminig\\OneDrive\\Pulpit\\Projekt\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\PROJECTS\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
       "projectName": "Cosmic Labirynth",
-      "projectPath": "C:\\Users\\Gaminig\\OneDrive\\Pulpit\\Projekt\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
-      "packagesPath": "C:\\Users\\Gaminig\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gaminig\\OneDrive\\Pulpit\\Projekt\\Cosmic-Labirynth\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\PROJECTS\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\PROJECTS\\Cosmic-Labirynth\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gaminig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -178,6 +178,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -213,7 +218,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

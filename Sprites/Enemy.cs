@@ -19,8 +19,6 @@ namespace Cosmic_Labirynth.Sprites
         int ChaseRadius = 200;
         int Chasing = 0;
 
-        
-
         public override Rectangle Rectangle
         {
             get
@@ -34,14 +32,12 @@ namespace Cosmic_Labirynth.Sprites
             PositionOnMap = position;
             IsEnemy = true;
         }
-
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
 
             Position += Velocity;
             Velocity = Vector2.Zero;
         }
-
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, Position, null, Color.White, 0, new Vector2(0, 0), Scale, SpriteEffects.None, 1.0f);
@@ -80,27 +76,20 @@ namespace Cosmic_Labirynth.Sprites
                    
 
                     //return; // No need to continue with random movement if chasing the player
-                }
+            }
                 else
                 { 
-            
-            
-           
-
-
-                // wyznaczenie kierunku ruchu gracza na podstawie klawisza // tu by było miejsce na wyznaczenie ruchu dla NPC jeśli by były
-                MovementCounter++;
-                if (MovementCounter > 60)
-                {
-                    int rand1 = random.Next(3);
-                    int rand2 = random.Next(3);
-                    MovementCounter = 0;
-                    if (rand1 == 0) { preVelocity.X = -Speed; } else if (rand1 == 1) { preVelocity.X = 0; } else if (rand1 == 2) { preVelocity.X = Speed; }
-                    if (rand2 == 0) { preVelocity.Y = -Speed; } else if (rand2 == 1) { preVelocity.Y = 0; } else if (rand2 == 2) { preVelocity.Y = Speed; }
+                    znaczenie kierunku ruchu gracza na podstawie klawisza // tu by było miejsce na wyznaczenie ruchu dla NPC jeśli by były
+                    MovementCounter++;
+                    if (MovementCounter > 60)
+                    {
+                        int rand1 = random.Next(3);
+                        int rand2 = random.Next(3);
+                        MovementCounter = 0;
+                        if (rand1 == 0) { preVelocity.X = -Speed; } else if (rand1 == 1) { preVelocity.X = 0; } else if (rand1 == 2) { preVelocity.X = Speed; }
+                        if (rand2 == 0) { preVelocity.Y = -Speed; } else if (rand2 == 1) { preVelocity.Y = 0; } else if (rand2 == 2) { preVelocity.Y = Speed; }
+                    }
                 }
-            }
-                
-
                 // sprawdzanie kolizji
                 foreach (var sprite in sprites)
                 {
@@ -116,29 +105,24 @@ namespace Cosmic_Labirynth.Sprites
                     }
                 }
                 Velocity += preVelocity;
-            }
-
+        }
             public override void EventChecker(List<Sprite> sprites)
             {
 
-            Player player = sprites.OfType<Player>().FirstOrDefault();
+                Player player = sprites.OfType<Player>().FirstOrDefault();
 
-            Vector2 directionToPlayer = player.Position - this.Position;
-            float distanceToPlayer = directionToPlayer.Length();
+                Vector2 directionToPlayer = player.Position - this.Position;
+                float distanceToPlayer = directionToPlayer.Length();
 
 
-            if (distanceToPlayer < ChaseRadius) 
-            {
-                Chasing = 1;            
+                if (distanceToPlayer < ChaseRadius) 
+                {
+                    Chasing = 1;            
+                }
+                else
+                {
+                    Chasing = 0;
+                }
             }
-            else
-            {
-                Chasing = 0;
-            }
-
-
-
-        }
-
         }
     }
