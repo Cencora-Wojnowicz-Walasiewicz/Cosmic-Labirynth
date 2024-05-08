@@ -28,12 +28,13 @@ namespace Cosmic_Labirynth.Sprites
         public Vector2 Origin;
         public Vector2 Direction;
         public Sprite Parent;
-        public float LifeSpan = 3f;
-        public float LinearVelocity = 3f;
+        public int LifeSpan = 30;
+        public float LinearVelocity = 6f;
         public float RotationVelocity = 3f;
         public bool IsRemoved = false;
 
         public bool IsEnemy = false;
+        public bool IsMap = false;
         public virtual Rectangle Rectangle
         {
             get

@@ -5,12 +5,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Cosmic_Labirynth.Sprites
 {
     public class Bullet : Sprite
     {
-        private float _timer;
+        private float _timer = 0;
+        private Vector2 VelocityTMP;
+
+        public override Rectangle Rectangle
+        {
+            get
+            {
+                return new Rectangle((int)Position.X, (int)Position.Y, 5 * (int)Scale, 5 * (int)Scale);
+            }
+        }
 
         public Bullet(Texture2D texture)
           : base(texture)
@@ -18,15 +28,50 @@ namespace Cosmic_Labirynth.Sprites
 
         }
 
-        public override void Update(GameTime gameTime, List<Sprite> sprites)
+        public override void SetMapMove(Vector2 moveVector) // ustawienie kierunku w którym ma poruszać się objekt
         {
-            _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            VelocityTMP += -moveVector;
+        }
 
+        public override void SetEntityMove(List<Sprite> sprites)
+        {
+            _timer++;
+
+            // usuwanie jeśli skończy się życie
             if (_timer >= LifeSpan)
                 IsRemoved = true;
 
-            Position += Direction * LinearVelocity;
-            PositionOnMap += Direction * LinearVelocity;
+            // sprawdzanie kolizji ze ścianami i przeciwnikami i usuwanie przeciwników jeśli ich HP zejdzie do 0
+            foreach (var sprite in sprites)
+            {
+                if (sprite == this)
+                    continue;
+                if (sprite.IsEnemy)
+                {
+                    if (this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite) || this.Rectangle.Intersects(sprite.Rectangle))
+                    {
+                        Debug.WriteLine("Enemy test");
+                        (sprite as Enemy).HP--;
+                        if ((sprite as Enemy).HP <=0)
+                            (sprite as Enemy).IsRemoved = true;
+                        IsRemoved = true;
+                    }
+                }
+                else if(sprite.IsMap && sprite.Collision)
+                {
+                    if (this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite) || this.Rectangle.Intersects(sprite.Rectangle))
+                    {
+                        Debug.WriteLine("Ściana test");
+                        IsRemoved = true;
+                    }
+                }
+            }
+        }
+        public override void Update(GameTime gameTime, List<Sprite> sprites)
+        {
+            Position += Velocity + VelocityTMP; // zmiana pozycji z uwzględnieniem ruchu mapy
+            PositionOnMap += Velocity;
+            VelocityTMP = Vector2.Zero; // zerowanie ruchu mapy jesli mapa przestała się ruszać
         }
     }
 }

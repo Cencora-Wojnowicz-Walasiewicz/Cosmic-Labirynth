@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MVe281nWNfsDQTjEjf0BLYiUadCFc4XQL4Y9N0DSWVrkk49UbSF8T0NMvtFXmBBjHJFaPlOLNs1G5Gjtrfk9tg==",
+  "dgSpecHash": "ruj7ngOLR2ypYzrIiUcUdRnBVeTbggFXB8A0gLDPkm/NOBUjPwDom6S8rd0l6R5y7ENya+7wUn7bJzYkgNCc9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\PROJECTS\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
+  "projectFilePath": "D:\\VS programy\\Cosmic Labirynth\\Cosmic-Labirynth\\Cosmic Labirynth.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Antek\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Antek\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Antek\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

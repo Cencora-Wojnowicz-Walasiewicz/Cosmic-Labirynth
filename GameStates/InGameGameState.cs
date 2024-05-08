@@ -50,7 +50,9 @@ namespace Cosmic_Labirynth.GameStates
                 Up = Keys.Up,
                 Right = Keys.Right,
                 Down = Keys.Down,
-                Left = Keys.Left
+                Left = Keys.Left,
+                Fire = Keys.Space,
+                HoldDirection = Keys.LeftShift
             };
         }
 
@@ -120,16 +122,25 @@ namespace Cosmic_Labirynth.GameStates
 
             _sprites.Add(player);
 
+            // dodanie przeciwników
             _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
             {
                 Speed = 1.0f * _Scale,
-                Scale = _Scale
+                Scale = _Scale,
+                HP = 2
             });
 
             _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
             {
                 Speed = 1.0f * _Scale,
-                Scale = _Scale
+                Scale = _Scale,
+                HP = 2
+            });
+            _sprites.Add(new Enemy(enemyTexture, new Vector2(8 * 32 * _Scale, 11 * 32 * _Scale))
+            {
+                Speed = 1.0f * _Scale,
+                Scale = _Scale,
+                HP = 2
             });
         }
         
@@ -141,7 +152,7 @@ namespace Cosmic_Labirynth.GameStates
 
         ////////////////////////////////////////////   EVENTS EXECUTION   ///////////////////////////////////////////////////////
         #region Events Execution
-        private void Player_OnEnemyCollision(object sender, EventArgs e)
+        private void Player_OnEnemyCollision(object sender, EventArgs e) // event zarządzający zabieraniem HP gracza
         {
             foreach (var sprite in _sprites)
             {
@@ -180,10 +191,7 @@ namespace Cosmic_Labirynth.GameStates
             foreach (var sprite in _sprites)
                 sprite.EventChecker(_sprites);
 
-            //Strzelanie bulletami
-            foreach (var sprite in _sprites.ToArray())
-                sprite.Update(gameTime, _sprites);
-
+            // Usuwanie oznaczonych spritów
             for(int i=0; i< _sprites.Count; i++)
                 if (_sprites[i].IsRemoved)
                 {

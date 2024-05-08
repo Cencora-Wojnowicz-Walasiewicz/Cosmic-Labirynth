@@ -28,6 +28,7 @@ namespace Cosmic_Labirynth.Sprites
             Collision = collision;
             Scale = scale;
             PositionOnMap = position;
+            IsMap = true;
 
         }
 

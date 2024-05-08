@@ -195,3 +195,5 @@ C:\Users\user\Desktop\PROJECTS\Cosmic-Labirynth\obj\Debug\net6.0\refint\Cosmic L
 C:\Users\user\Desktop\PROJECTS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.pdb
 C:\Users\user\Desktop\PROJECTS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.genruntimeconfig.cache
 C:\Users\user\Desktop\PROJECTS\Cosmic-Labirynth\obj\Debug\net6.0\ref\Cosmic Labirynth.dll
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet (1).xnb
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet.xnb

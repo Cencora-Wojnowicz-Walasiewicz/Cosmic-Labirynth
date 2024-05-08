@@ -19,7 +19,6 @@ namespace Cosmic_Labirynth.Sprites
         //////////////////////// PARAMETRS //////////////////////////
         #region Parametrs
         public int HP;
-        public Bullet Bullet;
         #endregion
 
         //////////////////////////// PROPERTIES //////////////////////
@@ -33,6 +32,8 @@ namespace Cosmic_Labirynth.Sprites
         private bool Switcher = true; // parametr od animacji
         Vector2 PositionOnMapTMP = Vector2.Zero;
         public int AttackDelay = 0;
+        
+        public Bullet Bullet;
 
         public event EventHandler OnEnemyCollision;
 
@@ -59,11 +60,12 @@ namespace Cosmic_Labirynth.Sprites
             _previousKey = _currentKey;
             _currentKey = Keyboard.GetState();
 
-            if (_currentKey.IsKeyDown(Keys.Space) &&
-                _previousKey.IsKeyUp(Keys.Space))
+            if (_currentKey.IsKeyDown(Input.Fire) &&
+                _previousKey.IsKeyUp(Input.Fire))
             { 
                 AddBullet(sprites);
             }
+
             if (PositionOnMap != PositionOnMapTMP)
             {
                 if (frameCounter >= 20)
@@ -86,12 +88,14 @@ namespace Cosmic_Labirynth.Sprites
             var bullet = Bullet.Clone() as Bullet;
             bullet.Direction = this.Direction;
             bullet.Position = this.Position + new Vector2(16* Scale, 16* Scale);
-            bullet.LinearVelocity = this.LinearVelocity * 2;
-            bullet.LifeSpan = 2f;
+            bullet.PositionOnMap = this.PositionOnMap + new Vector2(16 * Scale, 16 * Scale);
+            bullet.Velocity = this.Direction * 10;
+            bullet.LifeSpan = 300;
             bullet.Parent = this;
 
             sprites.Add(bullet);
         }
+
 
         public override void Draw(SpriteBatch spriteBatch)
         {
@@ -164,13 +168,18 @@ namespace Cosmic_Labirynth.Sprites
                 _rotation = MathHelper.PiOver2; // 90 degrees (down)
             }
 
-            Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
-
+            // przy przytrzymaniu klawisza HoldDirection (LShift) blokuje zmianę kierunku strzału
+            if (!Keyboard.GetState().IsKeyDown(Input.HoldDirection))
+            {
+                Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
+            }
 
             // sprawdzanie kolizji
             foreach (var sprite in sprites)
             {
-                if (sprite == this)
+                if (sprite == this) // ignorowanie kolizji jeśli  sprite to gracz
+                    continue;
+                if (sprite is Bullet) // ignorowanie kolizji jeśli sprite to Bullet
                     continue;
                 if (sprite.Collision)
                 {
@@ -291,7 +300,8 @@ namespace Cosmic_Labirynth.Sprites
                 
             foreach (var sprite in sprites)
             {
-                
+                if (sprite == this)
+                    continue;
                 if(sprite.IsEnemy)
                 {
                     if(this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite))

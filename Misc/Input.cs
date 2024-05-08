@@ -13,6 +13,8 @@ namespace Cosmic_Labirynth.Misc
         public Keys Right;// ID = 1
         public Keys Down;//  ID = 2
         public Keys Left;//  ID = 3
+        public Keys Fire;
+        public Keys HoldDirection;
         // W komentarzach znajdują się identyfikatory kierunku
         // dobrze zdefiniować to raz i mieć to jako standard
     }
