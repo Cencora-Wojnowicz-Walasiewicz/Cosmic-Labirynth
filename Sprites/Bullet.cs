@@ -50,7 +50,6 @@ namespace Cosmic_Labirynth.Sprites
                 {
                     if (this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite) || this.Rectangle.Intersects(sprite.Rectangle))
                     {
-                        Debug.WriteLine("Enemy test");
                         (sprite as Enemy).HP--;
                         if ((sprite as Enemy).HP <=0)
                             (sprite as Enemy).IsRemoved = true;
@@ -61,7 +60,6 @@ namespace Cosmic_Labirynth.Sprites
                 {
                     if (this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite) || this.Rectangle.Intersects(sprite.Rectangle))
                     {
-                        Debug.WriteLine("Ściana test");
                         IsRemoved = true;
                     }
                 }

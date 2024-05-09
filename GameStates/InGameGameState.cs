@@ -63,7 +63,8 @@ namespace Cosmic_Labirynth.GameStates
             MapData mapData = JsonConvert.DeserializeObject<MapData>(mdata.ToString());
             var playerTexture = content.Load<Texture2D>("Tilesets/Player1");
             var mapTileset = content.Load<Texture2D>(mapData.tilesetName);
-            var enemyTexture = content.Load<Texture2D>("PlayerTest");
+            var enemyTexture = content.Load<Texture2D>("Tilesets/Enemy1");
+            var enemyTextureAlt = content.Load<Texture2D>("Tilesets/Enemy1alt");
             var heartTexture = content.Load<Texture2D>("Tilesets/heart");
 
 
@@ -127,20 +128,23 @@ namespace Cosmic_Labirynth.GameStates
             {
                 Speed = 1.0f * _Scale,
                 Scale = _Scale,
-                HP = 2
+                HP = 2,
+                _textureAngry = enemyTextureAlt
             });
 
             _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
             {
                 Speed = 1.0f * _Scale,
                 Scale = _Scale,
-                HP = 2
+                HP = 2,
+                _textureAngry = enemyTextureAlt
             });
             _sprites.Add(new Enemy(enemyTexture, new Vector2(8 * 32 * _Scale, 11 * 32 * _Scale))
             {
                 Speed = 1.0f * _Scale,
                 Scale = _Scale,
-                HP = 2
+                HP = 2,
+                _textureAngry = enemyTextureAlt
             });
         }
         
