@@ -199,3 +199,5 @@ D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet
 D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet.xnb
 D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1.xnb
 D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1alt.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1alt.xnb

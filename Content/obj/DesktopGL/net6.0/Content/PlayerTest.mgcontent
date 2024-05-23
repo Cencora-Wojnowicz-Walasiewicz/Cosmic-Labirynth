@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/PlayerTest.png</SourceFile>
-  <SourceTime>2024-03-19T16:49:16.020452+01:00</SourceTime>
-  <DestFile>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/bin/DesktopGL/Content/PlayerTest.xnb</DestFile>
-  <DestTime>2024-05-07T17:29:46.5030476+02:00</DestTime>
+  <SourceFile>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/PlayerTest.png</SourceFile>
+  <SourceTime>2024-04-05T11:21:12.4575505+02:00</SourceTime>
+  <DestFile>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/bin/DesktopGL/Content/PlayerTest.xnb</DestFile>
+  <DestTime>2024-05-09T19:28:32.6919907+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

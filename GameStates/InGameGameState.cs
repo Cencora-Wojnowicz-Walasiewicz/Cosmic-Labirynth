@@ -146,6 +146,40 @@ namespace Cosmic_Labirynth.GameStates
                 HP = 2,
                 _textureAngry = enemyTextureAlt
             });
+           
+            _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 18 * 32 * _Scale))
+            {
+                Speed = 1.0f * _Scale,
+                Scale = _Scale,
+                HP = 2,
+                _textureAngry = enemyTextureAlt
+            });
+
+            _sprites.Add(new Enemy(enemyTexture, new Vector2(15 * 32 * _Scale, 8 * 32 * _Scale))
+            {
+                Speed = 1.0f * _Scale,
+                Scale = _Scale,
+                HP = 2,
+                _textureAngry = enemyTextureAlt
+            });
+
+            _sprites.Add(new Enemy(enemyTexture, new Vector2(16 * 32 * _Scale, 3 * 32 * _Scale))
+            {
+                Speed = 1.0f * _Scale,
+                Scale = _Scale,
+                HP = 2,
+                _textureAngry = enemyTextureAlt
+            });
+
+            _sprites.Add(new Enemy(enemyTexture, new Vector2(14 * 32 * _Scale, 16 * 32 * _Scale))
+            {
+                Speed = 1.0f * _Scale,
+                Scale = _Scale,
+                HP = 2,
+                _textureAngry = enemyTextureAlt
+            });
+
+
         }
         
         public override void UnloadContent()
