@@ -13,7 +13,7 @@ namespace Cosmic_Labirynth.Sprites
     {
         private float _timer = 0;
         private Vector2 VelocityTMP;
-
+        public event EventHandler OnEnemyDeath;
         public override Rectangle Rectangle
         {
             get
@@ -51,9 +51,12 @@ namespace Cosmic_Labirynth.Sprites
                     if (this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite) || this.Rectangle.Intersects(sprite.Rectangle))
                     {
                         (sprite as Enemy).HP--;
-                        if ((sprite as Enemy).HP <=0)
+                        if ((sprite as Enemy).HP <= 0)
+                        {
                             (sprite as Enemy).IsRemoved = true;
-                        IsRemoved = true;
+                            OnEnemyDeath?.Invoke(this, EventArgs.Empty);
+                        }
+                            IsRemoved = true;
                     }
                 }
                 else if(sprite.IsMap && sprite.Collision)

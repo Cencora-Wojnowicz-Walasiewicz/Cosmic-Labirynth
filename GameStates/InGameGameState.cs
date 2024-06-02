@@ -15,6 +15,7 @@ using System.IO;
 using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Reflection.Metadata;
+//using System.Numerics;
 
 namespace Cosmic_Labirynth.GameStates
 {
@@ -32,9 +33,9 @@ namespace Cosmic_Labirynth.GameStates
 
         private int _screenHeight;
         private int _screenWidth;
-
+        Player player;
         PlayerLifeInterface _playerLife;
-
+        private SpriteFont _scoreFont;
         public InGameGameState(GraphicsDevice graphicsDevice) : base(graphicsDevice)
         {
             _screenHeight = GameStateManager.Instance._graphics.PreferredBackBufferHeight;
@@ -66,7 +67,7 @@ namespace Cosmic_Labirynth.GameStates
             var enemyTexture = content.Load<Texture2D>("Tilesets/Enemy1");
             var enemyTextureAlt = content.Load<Texture2D>("Tilesets/Enemy1alt");
             var heartTexture = content.Load<Texture2D>("Tilesets/heart");
-
+             _scoreFont = content.Load<SpriteFont>("Fonts/Font");
 
 
             _playerLife = new PlayerLifeInterface(heartTexture);
@@ -107,7 +108,7 @@ namespace Cosmic_Labirynth.GameStates
             }
 
             // Dodanie gracza
-            Player player = new Player(playerTexture, new Vector2(32 * _Scale, 32 * _Scale))
+                player = new Player(playerTexture, new Vector2(32 * _Scale, 32 * _Scale))
             {
                 Input = _Input,
                 Speed = 2.0f * _Scale,
@@ -247,6 +248,7 @@ namespace Cosmic_Labirynth.GameStates
                 sprite.Draw(spriteBatch);
             }
             _playerLife.Draw(spriteBatch);
+            spriteBatch.DrawString(_scoreFont, "Score: " + player.Score, new Vector2(720, 10), Color.White);
             spriteBatch.End();
         }
         #endregion

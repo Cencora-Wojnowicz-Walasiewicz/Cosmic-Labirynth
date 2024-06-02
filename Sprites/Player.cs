@@ -32,7 +32,7 @@ namespace Cosmic_Labirynth.Sprites
         private bool Switcher = true; // parametr od animacji
         Vector2 PositionOnMapTMP = Vector2.Zero;
         public int AttackDelay = 0;
-        
+        public int Score = 0;
         public Bullet Bullet;
 
         public event EventHandler OnEnemyCollision;
@@ -92,8 +92,13 @@ namespace Cosmic_Labirynth.Sprites
             bullet.Velocity = this.Direction * 10;
             bullet.LifeSpan = 300;
             bullet.Parent = this;
-
+            bullet.OnEnemyDeath += Bullet_OnEnemyDeath;
             sprites.Add(bullet);
+        }
+
+        private void Bullet_OnEnemyDeath(object sender, EventArgs e)
+        {
+            Score++;
         }
 
 

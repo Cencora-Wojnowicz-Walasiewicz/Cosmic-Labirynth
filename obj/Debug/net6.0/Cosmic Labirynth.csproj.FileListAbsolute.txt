@@ -113,7 +113,6 @@ C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmi
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.AssemblyInfoInputs.cache
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.AssemblyInfo.cs
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.csproj.CoreCompileInputs.cache
-C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.csproj.CopyComplete
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.dll
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\refint\Cosmic Labirynth.dll
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.pdb
@@ -201,3 +200,5 @@ D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilese
 D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1alt.xnb
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1.xnb
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1alt.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.sourcelink.json
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic L.A1492AEF.Up2Date

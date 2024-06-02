@@ -1,7 +1,9 @@
 ﻿using Cosmic_Labirynth.GameStates;
+using Cosmic_Labirynth.Sprites;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+//using System.Numerics;
 
 namespace Cosmic_Labirynth
 {
@@ -9,8 +11,8 @@ namespace Cosmic_Labirynth
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
         
+
 
         public Game1()
         {
@@ -37,6 +39,7 @@ namespace Cosmic_Labirynth
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             GameStateManager.Instance.SetContent(Content);
             GameStateManager.Instance.AddScreen(new TitleGameState(GraphicsDevice));
+            //scoreFont = Content.Load<SpriteFont>("ScoreFont");
         }
 
         protected override void UnloadContent()
@@ -58,6 +61,7 @@ namespace Cosmic_Labirynth
 
             GameStateManager.Instance.Draw(_spriteBatch);
             base.Draw(gameTime);
+           
         }
     }
 }
