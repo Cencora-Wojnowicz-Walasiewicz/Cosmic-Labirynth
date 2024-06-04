@@ -1,1 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Profile>Reach</Profile><Platform>DesktopGL</Platform><Config /><SourceFiles><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Bullet (1).png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Bullet.png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Control/Button.png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/PlayerTest.png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Tilesets/Enemy1.png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Tilesets/Enemy1alt.png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Tilesets/heart.png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png</File><File>C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/Tilesets/Player1.png</File></SourceFiles><DestFiles><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /></DestFiles></SourceFileCollection>
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Bullet (1).png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Bullet.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Control/Button.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/PlayerTest.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Door.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Enemy1.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Enemy1alt.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/heart.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/mapTileset1.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Player1.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

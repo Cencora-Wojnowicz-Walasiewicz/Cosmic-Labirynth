@@ -9,6 +9,7 @@
     <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Control/Button.png</File>
     <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
     <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/PlayerTest.png</File>
+    <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Door.png</File>
     <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Enemy1.png</File>
     <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Enemy1alt.png</File>
     <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/heart.png</File>
@@ -16,6 +17,7 @@
     <File>D:/VS programy/Cosmic Labirynth/Cosmic-Labirynth/Content/Tilesets/Player1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

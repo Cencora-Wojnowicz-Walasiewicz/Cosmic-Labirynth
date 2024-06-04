@@ -20,7 +20,7 @@ namespace Cosmic_Labirynth.Sprites
         public Input Input;
         public bool Collision = true;
         public float Scale;
-        public float BorderDistance = 128f;
+        public float BorderDistance = 200f;
 
         protected KeyboardState _currentKey; 
         protected KeyboardState _previousKey; 

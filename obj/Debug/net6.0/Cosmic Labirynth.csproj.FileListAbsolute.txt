@@ -202,3 +202,4 @@ C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Conte
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1alt.xnb
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.sourcelink.json
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic L.A1492AEF.Up2Date
+D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Door.xnb

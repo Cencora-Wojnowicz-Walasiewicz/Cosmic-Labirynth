@@ -15,6 +15,7 @@ using System.IO;
 using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Reflection.Metadata;
+using System.Net.Mail;
 //using System.Numerics;
 
 namespace Cosmic_Labirynth.GameStates
@@ -26,6 +27,8 @@ namespace Cosmic_Labirynth.GameStates
         private List<Sprite> _sprites;
         private MapHandler _mapHandler = new MapHandler();
         private float _Scale = 2f;
+        private ContentManager _content;
+        private int mapNumber = 1;
 
         private Input _Input;
 
@@ -60,20 +63,27 @@ namespace Cosmic_Labirynth.GameStates
         public override void LoadContent(ContentManager content)
         {
             // Wczytanie danych mapy
+            //JObject mdata1 = JObject.Parse(File.ReadAllText(@"..\..\..\Maps\map1.json"));
+            //JObject mdata2 = JObject.Parse(File.ReadAllText(@"..\..\..\Maps\map2.json"));
+
             JObject mdata = JObject.Parse(File.ReadAllText(@"..\..\..\Maps\map1.json"));
+            if (mapNumber == 2) mdata = JObject.Parse(File.ReadAllText(@"..\..\..\Maps\map2.json"));
             MapData mapData = JsonConvert.DeserializeObject<MapData>(mdata.ToString());
+
             var playerTexture = content.Load<Texture2D>("Tilesets/Player1");
             var mapTileset = content.Load<Texture2D>(mapData.tilesetName);
             var enemyTexture = content.Load<Texture2D>("Tilesets/Enemy1");
             var enemyTextureAlt = content.Load<Texture2D>("Tilesets/Enemy1alt");
             var heartTexture = content.Load<Texture2D>("Tilesets/heart");
-             _scoreFont = content.Load<SpriteFont>("Fonts/Font");
+            var doorTexture = content.Load<Texture2D>("Tilesets/Door");
+            _scoreFont = content.Load<SpriteFont>("Fonts/Font");
+            _content = content;
 
 
             _playerLife = new PlayerLifeInterface(heartTexture);
 
             _sprites = new List<Sprite>();
-            
+
             // Wyznaczanie wielkości mapy
             Map = new Rectangle(0, 0, mapData.mapCols * 32 * (int)_Scale, mapData.mapRows * 32 * (int)_Scale);
 
@@ -107,82 +117,103 @@ namespace Cosmic_Labirynth.GameStates
                     });
             }
 
+            
+
             // Dodanie gracza
+            if (mapNumber == 1)
+            {    
+                Door door = new Door(doorTexture, new Vector2(4 * 32 * _Scale, 2 * 32 * _Scale))
+                {
+                    Scale = _Scale
+                };
+                door.OnDoorTouch += Door_OnDoorTouch;
+
+                _sprites.Add(door);
+
                 player = new Player(playerTexture, new Vector2(32 * _Scale, 32 * _Scale))
-            {
-                Input = _Input,
-                Speed = 2.0f * _Scale,
-                Scale = _Scale,
-                HP = 3,
-                Position = new Vector2(100, 100),
-                Bullet = new Bullet(content.Load<Texture2D>("Bullet")),
+                {
+                    Input = _Input,
+                    Speed = 2.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 3,
+                    Position = new Vector2(100, 100),
+                    Bullet = new Bullet(content.Load<Texture2D>("Bullet")),
 
-            };
+                };
+            
 
-            player.OnEnemyCollision += Player_OnEnemyCollision;
-            _playerLife.UpdatePlayerLife(player.HP);
+                player.OnEnemyCollision += Player_OnEnemyCollision;
+                player.OnEnoughScore += Player_OnEnoughScore;
+                _playerLife.UpdatePlayerLife(player.HP);
+            }
 
             _sprites.Add(player);
 
             // dodanie przeciwników
-            _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
+            if (mapNumber == 1)
             {
-                Speed = 1.0f * _Scale,
-                Scale = _Scale,
-                HP = 2,
-                _textureAngry = enemyTextureAlt
-            });
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
 
-            _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
-            {
-                Speed = 1.0f * _Scale,
-                Scale = _Scale,
-                HP = 2,
-                _textureAngry = enemyTextureAlt
-            });
-            _sprites.Add(new Enemy(enemyTexture, new Vector2(8 * 32 * _Scale, 11 * 32 * _Scale))
-            {
-                Speed = 1.0f * _Scale,
-                Scale = _Scale,
-                HP = 2,
-                _textureAngry = enemyTextureAlt
-            });
-           
-            _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 18 * 32 * _Scale))
-            {
-                Speed = 1.0f * _Scale,
-                Scale = _Scale,
-                HP = 2,
-                _textureAngry = enemyTextureAlt
-            });
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(8 * 32 * _Scale, 11 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
 
-            _sprites.Add(new Enemy(enemyTexture, new Vector2(15 * 32 * _Scale, 8 * 32 * _Scale))
-            {
-                Speed = 1.0f * _Scale,
-                Scale = _Scale,
-                HP = 2,
-                _textureAngry = enemyTextureAlt
-            });
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 18 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
 
-            _sprites.Add(new Enemy(enemyTexture, new Vector2(16 * 32 * _Scale, 3 * 32 * _Scale))
-            {
-                Speed = 1.0f * _Scale,
-                Scale = _Scale,
-                HP = 2,
-                _textureAngry = enemyTextureAlt
-            });
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(15 * 32 * _Scale, 8 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
 
-            _sprites.Add(new Enemy(enemyTexture, new Vector2(14 * 32 * _Scale, 16 * 32 * _Scale))
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(16 * 32 * _Scale, 3 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
+
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(14 * 32 * _Scale, 16 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
+            }else if(mapNumber == 2)
             {
-                Speed = 1.0f * _Scale,
-                Scale = _Scale,
-                HP = 2,
-                _textureAngry = enemyTextureAlt
-            });
+                // wczytanie BOSSA i dodanie go do spritów
+            }
 
 
         }
-        
+
         public override void UnloadContent()
         {
             //
@@ -204,8 +235,30 @@ namespace Cosmic_Labirynth.GameStates
                         _playerLife.UpdatePlayerLife((sprite as Player).HP);
                     }
                     Debug.Print(((sprite as Player).HP).ToString());
-                    if((sprite as Player).HP < 1)(sprite as Player).EventExecuter(_graphicsDevice);
+                    if ((sprite as Player).HP < 1) (sprite as Player).EventExecuter(_graphicsDevice);
                 }
+            }
+        }
+
+        private void Door_OnDoorTouch(object sender, EventArgs e)
+        {
+            foreach (var sprite in _sprites)
+            {
+                if (sprite is Player)
+                {
+                    player = (Player)sprite;
+                }
+            }
+            _sprites.Clear();
+            mapNumber = 2;
+            LoadContent(_content);
+        }
+
+        private void Player_OnEnoughScore(object sender, EventArgs e)
+        {
+            foreach (var sprite in _sprites)
+            {
+                if (sprite is Door) (sprite as Door).active = true;
             }
         }
         #endregion
@@ -231,7 +284,7 @@ namespace Cosmic_Labirynth.GameStates
                 sprite.EventChecker(_sprites);
 
             // Usuwanie oznaczonych spritów
-            for(int i=0; i< _sprites.Count; i++)
+            for (int i = 0; i < _sprites.Count; i++)
                 if (_sprites[i].IsRemoved)
                 {
                     _sprites.RemoveAt(i);

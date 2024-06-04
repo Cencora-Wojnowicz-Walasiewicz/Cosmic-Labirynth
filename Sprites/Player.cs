@@ -36,6 +36,7 @@ namespace Cosmic_Labirynth.Sprites
         public Bullet Bullet;
 
         public event EventHandler OnEnemyCollision;
+        public event EventHandler OnEnoughScore;
 
         public override Rectangle Rectangle
         {
@@ -99,6 +100,10 @@ namespace Cosmic_Labirynth.Sprites
         private void Bullet_OnEnemyDeath(object sender, EventArgs e)
         {
             Score++;
+            if (Score >= 5)
+            {
+                OnEnoughScore?.Invoke(this, EventArgs.Empty);
+            }
         }
 
 
