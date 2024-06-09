@@ -203,3 +203,41 @@ C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Conte
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.sourcelink.json
 C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic L.A1492AEF.Up2Date
 D:\VS programy\Cosmic Labirynth\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Door.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet (1).xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Bullet.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Control\Button.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Fonts\Font.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\PlayerTest.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Door.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Enemy1alt.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\heart.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\mapTileset1.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Player1.xnb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.exe
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.deps.json
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.runtimeconfig.json
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Cosmic Labirynth.pdb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.csproj.AssemblyReference.cache
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.AssemblyInfoInputs.cache
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.AssemblyInfo.cs
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.sourcelink.json
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic L.A1492AEF.Up2Date
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\refint\Cosmic Labirynth.dll
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.pdb
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\Cosmic Labirynth.genruntimeconfig.cache
+C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\obj\Debug\net6.0\ref\Cosmic Labirynth.dll
