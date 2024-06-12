@@ -106,7 +106,18 @@ namespace Cosmic_Labirynth.Sprites
             }
         }
 
-
+        public void TakeDamage(int damage)
+        {
+            HP -= damage;
+            Debug.WriteLine($"Player took {damage} damage. Remaining HP: {HP}");
+            if (HP <= 0)
+            {
+                IsRemoved = true;
+                Debug.WriteLine("Player removed after HP dropped to 0.");
+                // Trigger game over or any other logic for player death
+                OnEnemyCollision?.Invoke(this, EventArgs.Empty);
+            }
+        }
         public override void Draw(SpriteBatch spriteBatch)
         {
             int width = _texture.Width / Columns;

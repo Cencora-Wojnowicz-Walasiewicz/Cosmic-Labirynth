@@ -4,6 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Boss4.png</File>
+    <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Boss5.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Bullet (1).png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Bullet.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Control/Button.png</File>
@@ -20,19 +22,6 @@
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Player1.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

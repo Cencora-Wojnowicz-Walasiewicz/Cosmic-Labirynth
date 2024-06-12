@@ -3,44 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\repos\\cosmic-labirynth\\sprites\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|c:\\users\\mikol\\desktop\\repos\\cosmic-labirynth\\gamestates\\ingamegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:gamestates\\ingamegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\content\\tilesets\\boss3.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:content\\tilesets\\boss3.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\content\\tilesets\\boss2.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:content\\tilesets\\boss2.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\content\\tilesets\\boss.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:content\\tilesets\\boss.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\sprites\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\gamestates\\ingamegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:gamestates\\ingamegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\gamestates\\titlegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:gamestates\\titlegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\gamestates\\menumaingamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:gamestates\\menumaingamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\sprites\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\sprites\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\sprites\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:sprites\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\misc\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413E5673-5899-4484-B8C2-D46BBB47ACD1}|Cosmic Labirynth.csproj|solutionrelative:misc\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,128 +30,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Boss.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Boss.cs",
-              "RelativeDocumentMoniker": "Sprites\\Boss.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Boss.cs",
-              "RelativeToolTip": "Sprites\\Boss.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALcAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T11:29:18.061Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Enemy.cs",
-              "RelativeDocumentMoniker": "Sprites\\Enemy.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Enemy.cs",
-              "RelativeToolTip": "Sprites\\Enemy.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAuwMAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T07:00:41.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Sprite.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Sprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Sprite.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Sprite.cs",
-              "RelativeToolTip": "Sprites\\Sprite.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwBUAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T10:16:43.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Bullet.cs",
-              "RelativeDocumentMoniker": "Sprites\\Bullet.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Bullet.cs",
-              "RelativeToolTip": "Sprites\\Bullet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T10:27:23.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Player.cs",
-              "RelativeDocumentMoniker": "Sprites\\Player.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Player.cs",
-              "RelativeToolTip": "Sprites\\Player.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:23:59.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "InGameGameState.cs",
               "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\GameStates\\InGameGameState.cs",
               "RelativeDocumentMoniker": "GameStates\\InGameGameState.cs",
               "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\GameStates\\InGameGameState.cs",
               "RelativeToolTip": "GameStates\\InGameGameState.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAcwBwAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:24:01.329Z"
+              "WhenOpened": "2024-06-11T22:35:41.752Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Game1.cs",
-              "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowD8AAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:40:09.067Z"
+              "DocumentIndex": 1,
+              "Title": "Boss3.png",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Content\\Tilesets\\Boss3.png",
+              "RelativeDocumentMoniker": "Content\\Tilesets\\Boss3.png",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Content\\Tilesets\\Boss3.png",
+              "RelativeToolTip": "Content\\Tilesets\\Boss3.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-06-11T22:35:22.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuMainGameState.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\GameStates\\MenuMainGameState.cs",
-              "RelativeDocumentMoniker": "GameStates\\MenuMainGameState.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\GameStates\\MenuMainGameState.cs",
-              "RelativeToolTip": "GameStates\\MenuMainGameState.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:45:41.771Z"
+              "DocumentIndex": 2,
+              "Title": "Boss2.png",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Content\\Tilesets\\Boss2.png",
+              "RelativeDocumentMoniker": "Content\\Tilesets\\Boss2.png",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Content\\Tilesets\\Boss2.png",
+              "RelativeToolTip": "Content\\Tilesets\\Boss2.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-06-11T22:35:22.052Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TitleGameState.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\GameStates\\TitleGameState.cs",
-              "RelativeDocumentMoniker": "GameStates\\TitleGameState.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\GameStates\\TitleGameState.cs",
-              "RelativeToolTip": "GameStates\\TitleGameState.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:45:44.68Z"
+              "Title": "Boss.png",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Content\\Tilesets\\Boss.png",
+              "RelativeDocumentMoniker": "Content\\Tilesets\\Boss.png",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Content\\Tilesets\\Boss.png",
+              "RelativeToolTip": "Content\\Tilesets\\Boss.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-06-11T22:35:21.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Input.cs",
-              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Misc\\Input.cs",
-              "RelativeDocumentMoniker": "Misc\\Input.cs",
-              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Misc\\Input.cs",
-              "RelativeToolTip": "Misc\\Input.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "DocumentIndex": 4,
+              "Title": "Boss.cs",
+              "DocumentMoniker": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Boss.cs",
+              "RelativeDocumentMoniker": "Sprites\\Boss.cs",
+              "ToolTip": "C:\\Users\\mikol\\Desktop\\REPOS\\Cosmic-Labirynth\\Sprites\\Boss.cs",
+              "RelativeToolTip": "Sprites\\Boss.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAIwIIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:51:14.515Z"
+              "WhenOpened": "2024-06-09T11:29:18.061Z"
             }
           ]
         }

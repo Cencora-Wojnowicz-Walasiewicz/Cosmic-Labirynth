@@ -2,10 +2,10 @@
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics;
 
 namespace Cosmic_Labirynth.Sprites
 {
@@ -14,6 +14,7 @@ namespace Cosmic_Labirynth.Sprites
         private float _timer = 0;
         private Vector2 VelocityTMP;
         public event EventHandler OnEnemyDeath;
+
         public override Rectangle Rectangle
         {
             get
@@ -25,10 +26,9 @@ namespace Cosmic_Labirynth.Sprites
         public Bullet(Texture2D texture)
           : base(texture)
         {
-
         }
 
-        public override void SetMapMove(Vector2 moveVector) // ustawienie kierunku w którym ma poruszać się objekt
+        public override void SetMapMove(Vector2 moveVector)
         {
             VelocityTMP += -moveVector;
         }
@@ -37,42 +37,74 @@ namespace Cosmic_Labirynth.Sprites
         {
             _timer++;
 
-            // usuwanie jeśli skończy się życie
+            // Remove if life span is exceeded
             if (_timer >= LifeSpan)
+            {
                 IsRemoved = true;
+                Debug.WriteLine("Bullet removed due to lifespan.");
+            }
 
-            // sprawdzanie kolizji ze ścianami i przeciwnikami i usuwanie przeciwników jeśli ich HP zejdzie do 0
+            // Collision detection with enemies and map objects
             foreach (var sprite in sprites)
             {
                 if (sprite == this)
                     continue;
-                if (sprite.IsEnemy)
+
+                if (sprite.IsEnemy && (IsTouching(sprite) || Rectangle.Intersects(sprite.Rectangle)))
                 {
-                    if (this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite) || this.Rectangle.Intersects(sprite.Rectangle))
+                    if (sprite is Enemy enemy)
                     {
-                        (sprite as Enemy).HP--;
-                        if ((sprite as Enemy).HP <= 0)
+                        enemy.HP--;
+                        Debug.WriteLine($"Hit enemy. Remaining HP: {enemy.HP}");
+
+                        if (enemy.HP <= 0)
                         {
-                            (sprite as Enemy).IsRemoved = true;
+                            enemy.IsRemoved = true;
                             OnEnemyDeath?.Invoke(this, EventArgs.Empty);
+                            Debug.WriteLine("Enemy removed.");
                         }
-                            IsRemoved = true;
-                    }
-                }
-                else if(sprite.IsMap && sprite.Collision)
-                {
-                    if (this.IsTouchingBottom(sprite) || this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) || this.IsTouchingTop(sprite) || this.Rectangle.Intersects(sprite.Rectangle))
-                    {
+
                         IsRemoved = true;
+                        Debug.WriteLine("Bullet removed after hitting enemy.");
                     }
+                    else if (sprite is Boss boss)
+                    {
+                        boss.HP--;
+                        Debug.WriteLine($"Hit boss. Remaining HP: {boss.HP}");
+
+                        if (boss.HP <= 0)
+                        {
+                            boss.IsRemoved = true;
+                            OnEnemyDeath?.Invoke(this, EventArgs.Empty);
+                            Debug.WriteLine("Boss removed.");
+                        }
+
+                        IsRemoved = true;
+                        Debug.WriteLine("Bullet removed after hitting boss.");
+                    }
+                    break;
+                }
+                else if (sprite.IsMap && sprite.Collision && (IsTouching(sprite) || Rectangle.Intersects(sprite.Rectangle)))
+                {
+                    IsRemoved = true;
+                    Debug.WriteLine("Bullet removed after hitting map.");
+                    break;
                 }
             }
         }
+
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-            Position += Velocity + VelocityTMP; // zmiana pozycji z uwzględnieniem ruchu mapy
+            Position += Velocity + VelocityTMP; // Update position with velocity
             PositionOnMap += Velocity;
-            VelocityTMP = Vector2.Zero; // zerowanie ruchu mapy jesli mapa przestała się ruszać
+            VelocityTMP = Vector2.Zero; // Reset temporary velocity
+        }
+
+        // Helper method to check for collisions with other sprites
+        private bool IsTouching(Sprite sprite)
+        {
+            return this.IsTouchingLeft(sprite) || this.IsTouchingRight(sprite) ||
+                   this.IsTouchingTop(sprite) || this.IsTouchingBottom(sprite);
         }
     }
 }

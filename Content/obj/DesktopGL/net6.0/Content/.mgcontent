@@ -4,11 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Boss4.png</File>
+    <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Boss5.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Bullet (1).png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Bullet.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Control/Button.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Fonts/Font.spritefont</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/PlayerTest.png</File>
+    <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Boss.png</File>
+    <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Boss2.png</File>
+    <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Boss3.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Door.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Enemy1.png</File>
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Enemy1alt.png</File>
@@ -17,6 +22,11 @@
     <File>C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Tilesets/Player1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

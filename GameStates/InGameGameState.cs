@@ -76,6 +76,12 @@ namespace Cosmic_Labirynth.GameStates
             var enemyTextureAlt = content.Load<Texture2D>("Tilesets/Enemy1alt");
             var heartTexture = content.Load<Texture2D>("Tilesets/heart");
             var doorTexture = content.Load<Texture2D>("Tilesets/Door");
+            var bossTexture = content.Load<Texture2D>("Boss5"); // Use an existing texture or a placeholder
+            var bossTextureTransition1 = content.Load<Texture2D>("Tilesets/Boss3"); // Use an existing texture or a placeholder
+            var bossTextureTransition2 = content.Load<Texture2D>("Boss4"); // Use an existing texture or a placeholder
+            var bulletTexture = content.Load<Texture2D>("Bullet"); // Use an existing texture or a placeholder
+            var bossTextureAngry = content.Load<Texture2D>("Tilesets/Enemy1alt"); // Use an existing texture or a placeholder
+
             _scoreFont = content.Load<SpriteFont>("Fonts/Font");
             _content = content;
 
@@ -208,7 +214,13 @@ namespace Cosmic_Labirynth.GameStates
                 });
             }else if(mapNumber == 2)
             {
-                // wczytanie BOSSA i dodanie go do spritów
+                _sprites.Add(new Boss(bossTexture, bossTextureTransition1, bossTextureTransition2, bulletTexture, new Vector2(10 * 32 * _Scale, 10 * 32 * _Scale))
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 30,
+                    _textureAngry = bossTexture // Ensure you have this texture loaded
+                });
             }
 
 
@@ -287,9 +299,23 @@ namespace Cosmic_Labirynth.GameStates
             for (int i = 0; i < _sprites.Count; i++)
                 if (_sprites[i].IsRemoved)
                 {
-                    _sprites.RemoveAt(i);
+                    _sprites.RemoveAt(i);  
                     i--;
                 }
+            // Handle boss bullets
+            foreach (var sprite in _sprites.OfType<Boss>())
+            {
+                foreach (var bullet in sprite.BossBullets)
+                {
+                    bullet.Update(gameTime, _sprites);
+                }
+            }
+
+            // Remove boss bullets that are marked as removed
+            foreach (var sprite in _sprites.OfType<Boss>())
+            {
+                sprite.BossBullets.RemoveAll(b => b.IsRemoved);
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)

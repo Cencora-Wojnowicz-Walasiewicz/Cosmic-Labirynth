@@ -25,10 +25,13 @@ namespace Cosmic_Labirynth.Sprites
         public Texture2D _textureAngry;
         public Texture2D _textureTransition1;
         public Texture2D _textureTransition2;
+        public Texture2D _bulletTexture;
 
         private Vector2 ClearVelocity = Vector2.Zero;
 
         private float frameCounter = 0.0f;
+        private float shootCooldown = 0.0f;
+        private float shootInterval = 60.0f;
 
         int MovementCounter = 60;
         Random random = new Random();
@@ -36,8 +39,10 @@ namespace Cosmic_Labirynth.Sprites
         int ChaseRadius = 200;
         int Chasing = 0;
 
-        public float Scale = 3.0f;
+        public new float Scale = 3.0f;
         public int damage = 10;
+
+        public List<Bullet> BossBullets { get; private set; } = new List<Bullet>();
 
         public override Rectangle Rectangle
         {
@@ -47,7 +52,7 @@ namespace Cosmic_Labirynth.Sprites
             }
         }
 
-        public Boss(Texture2D texture, Texture2D textureTransition1, Texture2D textureTransition2, Vector2 position) : base(texture)
+        public Boss(Texture2D texture, Texture2D textureTransition1, Texture2D textureTransition2, Texture2D bulletTexture, Vector2 position) : base(texture)
         {
             Position = position;
             PositionOnMap = position;
@@ -56,7 +61,8 @@ namespace Cosmic_Labirynth.Sprites
             _textureNormal = texture;
             _textureTransition1 = textureTransition1;
             _textureTransition2 = textureTransition2;
-            HP = 300;
+            _bulletTexture = bulletTexture;
+            HP = 30;
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
@@ -81,6 +87,95 @@ namespace Cosmic_Labirynth.Sprites
             Position += Velocity;
             Velocity = Vector2.Zero;
             ClearVelocity = Vector2.Zero;
+
+            if (Chasing == 1)
+            {
+                shootCooldown += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (shootCooldown >= shootInterval / 60.0f)
+                {
+                    ShootAtPlayer(sprites.OfType<Player>().FirstOrDefault());
+                    shootCooldown = 0.0f;
+                }
+            }
+
+            var player = sprites.OfType<Player>().FirstOrDefault();
+            for (int i = 0; i < BossBullets.Count; i++)
+            {
+                var bullet = BossBullets[i];
+                bullet.Update(gameTime, sprites);
+
+                if (bullet.IsRemoved)
+                {
+                    BossBullets.RemoveAt(i);
+                    i--;
+                }
+                else if (player != null && bullet.Rectangle.Intersects(player.Rectangle))
+                {
+                    player.TakeDamage(damage);
+                    bullet.IsRemoved = true;
+                    Debug.WriteLine("Player hit by boss bullet.");
+                }
+            }
+            // Update texture based on HP
+            if (HP > 20)
+            {
+                _texture = _textureNormal;
+            }
+            else if (HP > 10)
+            {
+                _texture = _textureTransition2;
+            }
+            else
+            {
+                _texture = _textureTransition1;
+            }
+
+            // Check for HP and handle death
+            if (HP <= 0)
+            {
+                IsRemoved = true;
+                Debug.WriteLine("Boss removed after HP dropped to 0.");
+            }
+        }
+
+
+        private void ShootAtPlayer(Player player)
+        {
+            Vector2 direction = Vector2.Normalize(player.Position - this.Position);
+
+            // Main bullet
+            Bullet mainBullet = new Bullet(_bulletTexture)
+            {
+                Position = this.Position,
+                Velocity = direction * 5f,
+                LifeSpan = 100
+            };
+            BossBullets.Add(mainBullet);
+
+            if (HP <= 5)
+            {
+                // Left bullet
+                float angle = MathHelper.ToRadians(15); // 15 degrees to the left
+                Vector2 leftDirection = Vector2.Transform(direction, Matrix.CreateRotationZ(angle));
+                Bullet leftBullet = new Bullet(_bulletTexture)
+                {
+                    Position = this.Position,
+                    Velocity = leftDirection * 5f,
+                    LifeSpan = 100
+                };
+                BossBullets.Add(leftBullet);
+
+                // Right bullet
+                angle = MathHelper.ToRadians(-15); // 15 degrees to the right
+                Vector2 rightDirection = Vector2.Transform(direction, Matrix.CreateRotationZ(angle));
+                Bullet rightBullet = new Bullet(_bulletTexture)
+                {
+                    Position = this.Position,
+                    Velocity = rightDirection * 5f,
+                    LifeSpan = 100
+                };
+                BossBullets.Add(rightBullet);
+            }
         }
 
         private void NextFrame()
@@ -115,6 +210,11 @@ namespace Cosmic_Labirynth.Sprites
 
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
             spriteBatch.Draw(_texture, Position, sourceRectangle, Color.White, 0, new Vector2(0, 0), Scale, SpriteEffects.None, 1.0f);
+
+            foreach (var bullet in BossBullets)
+            {
+                bullet.Draw(spriteBatch);
+            }
         }
 
         public override void SetMapMove(Vector2 moveVector)
@@ -181,20 +281,20 @@ namespace Cosmic_Labirynth.Sprites
             if (distanceToPlayer < ChaseRadius)
             {
                 Chasing = 1;
-                if (HP < 200 && HP >= 100)
+                if (HP < 20 && HP >= 10)
                 {
                     _texture = _textureTransition1;
-                    damage = 20;
+                    damage = 1;
                 }
-                else if (HP < 100)
+                else if (HP < 10)
                 {
-                    _texture = _textureTransition2;
-                    damage = 30;
+                    _texture = _textureTransition1;
+                    damage = 1;
                 }
                 else
                 {
-                    _texture = _textureNormal;
-                    damage = 10;
+                    _texture = _textureTransition2;
+                    damage = 1;
                 }
             }
             else
