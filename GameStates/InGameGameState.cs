@@ -16,7 +16,8 @@ using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Reflection.Metadata;
 using System.Net.Mail;
-//using System.Numerics;
+using Microsoft.Xna.Framework.Audio;
+
 
 namespace Cosmic_Labirynth.GameStates
 {
@@ -30,6 +31,12 @@ namespace Cosmic_Labirynth.GameStates
         private ContentManager _content;
         private int mapNumber = 1;
 
+        private SoundEffect _blasterSound;
+
+        private SoundEffect _deathSound;
+
+       
+
         private Input _Input;
 
         private Rectangle Map;
@@ -39,6 +46,8 @@ namespace Cosmic_Labirynth.GameStates
         Player player;
         PlayerLifeInterface _playerLife;
         private SpriteFont _scoreFont;
+        private SoundEffect _deathSoundPlayer;
+
         public InGameGameState(GraphicsDevice graphicsDevice) : base(graphicsDevice)
         {
             _screenHeight = GameStateManager.Instance._graphics.PreferredBackBufferHeight;
@@ -70,6 +79,13 @@ namespace Cosmic_Labirynth.GameStates
             if (mapNumber == 2) mdata = JObject.Parse(File.ReadAllText(@"..\..\..\Maps\map2.json"));
             MapData mapData = JsonConvert.DeserializeObject<MapData>(mdata.ToString());
 
+
+            _blasterSound = content.Load<SoundEffect>(@"sound/blaster");
+
+            _deathSound = content.Load<SoundEffect>(@"sound/death1");
+
+            _deathSoundPlayer = content.Load<SoundEffect>(@"sound/death");
+
             var playerTexture = content.Load<Texture2D>("Tilesets/Player1");
             var mapTileset = content.Load<Texture2D>(mapData.tilesetName);
             var enemyTexture = content.Load<Texture2D>("Tilesets/Enemy1");
@@ -81,6 +97,8 @@ namespace Cosmic_Labirynth.GameStates
             var bossTextureTransition2 = content.Load<Texture2D>("Boss4"); // Use an existing texture or a placeholder
             var bulletTexture = content.Load<Texture2D>("Bullet"); // Use an existing texture or a placeholder
             var bossTextureAngry = content.Load<Texture2D>("Tilesets/Enemy1alt"); // Use an existing texture or a placeholder
+
+            
 
             _scoreFont = content.Load<SpriteFont>("Fonts/Font");
             _content = content;
@@ -136,7 +154,7 @@ namespace Cosmic_Labirynth.GameStates
 
                 _sprites.Add(door);
 
-                player = new Player(playerTexture, new Vector2(32 * _Scale, 32 * _Scale))
+                player = new Player(playerTexture, new Vector2(32 * _Scale, 32 * _Scale), _blasterSound, _deathSoundPlayer)
                 {
                     Input = _Input,
                     Speed = 2.0f * _Scale,
@@ -158,7 +176,7 @@ namespace Cosmic_Labirynth.GameStates
             // dodanie przeciwników
             if (mapNumber == 1)
             {
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale))
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(7 * 32 * _Scale, 10 * 32 * _Scale), _deathSound)
                 {
                     Speed = 1.0f * _Scale,
                     Scale = _Scale,
@@ -166,22 +184,14 @@ namespace Cosmic_Labirynth.GameStates
                     _textureAngry = enemyTextureAlt
                 });
 
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale))
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 5 * 32 * _Scale), _deathSound)
                 {
                     Speed = 1.0f * _Scale,
                     Scale = _Scale,
                     HP = 2,
                     _textureAngry = enemyTextureAlt
                 });
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(8 * 32 * _Scale, 11 * 32 * _Scale))
-                {
-                    Speed = 1.0f * _Scale,
-                    Scale = _Scale,
-                    HP = 2,
-                    _textureAngry = enemyTextureAlt
-                });
-
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 18 * 32 * _Scale))
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(6 * 32 * _Scale, 11 * 32 * _Scale), _deathSound)
                 {
                     Speed = 1.0f * _Scale,
                     Scale = _Scale,
@@ -189,7 +199,7 @@ namespace Cosmic_Labirynth.GameStates
                     _textureAngry = enemyTextureAlt
                 });
 
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(15 * 32 * _Scale, 8 * 32 * _Scale))
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(5 * 32 * _Scale, 18 * 32 * _Scale), _deathSound)
                 {
                     Speed = 1.0f * _Scale,
                     Scale = _Scale,
@@ -197,7 +207,7 @@ namespace Cosmic_Labirynth.GameStates
                     _textureAngry = enemyTextureAlt
                 });
 
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(16 * 32 * _Scale, 3 * 32 * _Scale))
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(15 * 32 * _Scale, 6 * 32 * _Scale), _deathSound)
                 {
                     Speed = 1.0f * _Scale,
                     Scale = _Scale,
@@ -205,7 +215,15 @@ namespace Cosmic_Labirynth.GameStates
                     _textureAngry = enemyTextureAlt
                 });
 
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(14 * 32 * _Scale, 16 * 32 * _Scale))
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(16 * 32 * _Scale, 3 * 32 * _Scale), _deathSound)
+                {
+                    Speed = 1.0f * _Scale,
+                    Scale = _Scale,
+                    HP = 2,
+                    _textureAngry = enemyTextureAlt
+                });
+
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(14 * 32 * _Scale, 16 * 32 * _Scale), _deathSound)
                 {
                     Speed = 1.0f * _Scale,
                     Scale = _Scale,
@@ -217,7 +235,7 @@ namespace Cosmic_Labirynth.GameStates
                 _sprites.Add(new Boss(bossTexture, bossTextureTransition1, bossTextureTransition2, bulletTexture, new Vector2(10 * 32 * _Scale, 10 * 32 * _Scale))
                 {
                     Speed = 1.0f * _Scale,
-                    Scale = _Scale,
+                    Scale = 3.0f * _Scale,
                     HP = 30,
                     _textureAngry = bossTexture // Ensure you have this texture loaded
                 });

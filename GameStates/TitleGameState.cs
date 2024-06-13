@@ -15,9 +15,15 @@ namespace Cosmic_Labirynth.GameStates
     public class TitleGameState : GameState
     {
         private List<Component> _components;
+
+
+        private Viewport _viewport;
+
+        private Texture2D _backgroundTexture;
+
         public TitleGameState(GraphicsDevice graphicsDevice) : base(graphicsDevice) 
         {
-            //
+             _viewport = graphicsDevice.Viewport;
         }
 
         public override void Initialize()
@@ -29,7 +35,9 @@ namespace Cosmic_Labirynth.GameStates
         {
             var buttonTexture = content.Load<Texture2D>("Control/Button");
             var buttonFont = content.Load<SpriteFont>("Fonts/Font");
-            
+
+
+            _backgroundTexture = content.Load<Texture2D>("kk");
 
             var newGameButton = new Button(buttonTexture, buttonFont)
             {
@@ -74,6 +82,11 @@ namespace Cosmic_Labirynth.GameStates
         {
             _graphicsDevice.Clear(Color.White);
             spriteBatch.Begin();
+
+            float scaleX = (float)_viewport.Width / _backgroundTexture.Width;
+            float scaleY = (float)_viewport.Height / _backgroundTexture.Height;
+
+            spriteBatch.Draw(_backgroundTexture, Vector2.Zero, null, Color.White, 0f, Vector2.Zero, new Vector2(scaleX, scaleY), SpriteEffects.None, 0f);
             foreach (var component in _components)
                 component.Draw(spriteBatch);
             spriteBatch.End();

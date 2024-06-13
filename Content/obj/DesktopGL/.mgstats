@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/Boss4.png","C:/Users/mikol/Desktop/REPOS/Cosmic-Labirynth/Content/bin/DesktopGL/Boss4.xnb","TextureProcessor","Texture2DContent",6197,49237,0,098306
+"C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/sound/death.wav","C:/Users/Gaminig/OneDrive/Pulpit/Projekt/Cosmic-Labirynth/Content/bin/DesktopGL/sound/death.xnb","SoundEffectProcessor","SoundEffectContent",194826,194853,0,6533807

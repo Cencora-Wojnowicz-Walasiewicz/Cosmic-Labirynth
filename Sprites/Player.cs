@@ -11,6 +11,7 @@ using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics;
 using Cosmic_Labirynth.GameStates;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Cosmic_Labirynth.Sprites
 {
@@ -35,6 +36,10 @@ namespace Cosmic_Labirynth.Sprites
         public int Score = 0;
         public Bullet Bullet;
 
+        private SoundEffect _deathSoundPlayer;
+
+        private SoundEffect _blasterSound;
+
         public event EventHandler OnEnemyCollision;
         public event EventHandler OnEnoughScore;
 
@@ -46,11 +51,13 @@ namespace Cosmic_Labirynth.Sprites
             }
         }
         #endregion
-        public Player(Texture2D texture, Vector2 position) : base(texture)
+        public Player(Texture2D texture, Vector2 position, SoundEffect blasterSound, SoundEffect deathSoundPlayer) : base(texture)
         {
             Position = position;
             PositionOnMap = position;
             PositionOnMapTMP = position;
+            _blasterSound = blasterSound;
+            _deathSoundPlayer = deathSoundPlayer;
         }
        //public Player(Texture2D texture) : base(texture) {}
 
@@ -63,7 +70,8 @@ namespace Cosmic_Labirynth.Sprites
 
             if (_currentKey.IsKeyDown(Input.Fire) &&
                 _previousKey.IsKeyUp(Input.Fire))
-            { 
+            {
+                _blasterSound.Play();
                 AddBullet(sprites);
             }
 
@@ -95,6 +103,9 @@ namespace Cosmic_Labirynth.Sprites
             bullet.Parent = this;
             bullet.OnEnemyDeath += Bullet_OnEnemyDeath;
             sprites.Add(bullet);
+
+            
+
         }
 
         private void Bullet_OnEnemyDeath(object sender, EventArgs e)
@@ -113,6 +124,7 @@ namespace Cosmic_Labirynth.Sprites
             if (HP <= 0)
             {
                 IsRemoved = true;
+                _deathSoundPlayer.Play();
                 Debug.WriteLine("Player removed after HP dropped to 0.");
                 // Trigger game over or any other logic for player death
                 OnEnemyCollision?.Invoke(this, EventArgs.Empty);

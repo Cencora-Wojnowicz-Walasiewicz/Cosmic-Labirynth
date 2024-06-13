@@ -246,3 +246,13 @@ C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\
 C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Boss3.xnb
 C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Boss4.xnb
 C:\Users\mikol\Desktop\REPOS\Cosmic-Labirynth\bin\Debug\net6.0\Content\Boss5.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Boss4.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Boss5.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Boss.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Boss2.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Boss3.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\Tilesets\Door.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\sound\blaster.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\sound\death1.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\kk.xnb
+C:\Users\Gaminig\OneDrive\Pulpit\Projekt\Cosmic-Labirynth\bin\Debug\net6.0\Content\sound\death.xnb

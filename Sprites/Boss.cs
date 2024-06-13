@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Cosmic_Labirynth.GameStates;
 
 namespace Cosmic_Labirynth.Sprites
 {
@@ -39,7 +40,7 @@ namespace Cosmic_Labirynth.Sprites
         int ChaseRadius = 200;
         int Chasing = 0;
 
-        public new float Scale = 3.0f;
+        public new float Scale = 10.0f;
         public int damage = 10;
 
         public List<Bullet> BossBullets { get; private set; } = new List<Bullet>();
@@ -134,6 +135,9 @@ namespace Cosmic_Labirynth.Sprites
             if (HP <= 0)
             {
                 IsRemoved = true;
+
+               
+
                 Debug.WriteLine("Boss removed after HP dropped to 0.");
             }
         }

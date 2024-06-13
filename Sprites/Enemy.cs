@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Microsoft.Xna.Framework.Audio;
 //using System.Numerics;
 
 namespace Cosmic_Labirynth.Sprites
@@ -25,6 +26,8 @@ namespace Cosmic_Labirynth.Sprites
         public Texture2D _textureNormal;
         public Texture2D _textureAngry;
 
+        private SoundEffect _deathSound;
+
         private Vector2 ClearVelocity = Vector2.Zero;
 
         private float frameCounter = 0.0f;
@@ -42,12 +45,12 @@ namespace Cosmic_Labirynth.Sprites
                 return new Rectangle((int)Position.X, (int)Position.Y, 32 * (int)Scale, 32 * (int)Scale);
             }
         }
-        public Enemy(Texture2D texture, Vector2 position) : base(texture)
+        public Enemy(Texture2D texture, Vector2 position, SoundEffect deathSound) : base(texture)
         {
             Position = position;
             PositionOnMap = position;
             IsEnemy = true;
-
+            _deathSound = deathSound;
             _textureNormal = texture;
         }
         public override void Update(GameTime gameTime, List<Sprite> sprites)
@@ -67,6 +70,14 @@ namespace Cosmic_Labirynth.Sprites
                 currentFrame = baseFrame;
                 currentFrameCounter = baseFrame;
             }
+
+            if (HP <= 0)
+            {
+                
+                _deathSound?.Play(); // Odtwarzanie dźwięku śmierci
+                
+            }
+
 
             PositionOnMap += ClearVelocity; // ruch po mapie bez uwzględnienia ruchu mapy
             Position += Velocity;

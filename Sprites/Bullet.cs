@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Microsoft.Xna.Framework.Audio;
+
 namespace Cosmic_Labirynth.Sprites
 {
     public class Bullet : Sprite
@@ -14,6 +16,8 @@ namespace Cosmic_Labirynth.Sprites
         private float _timer = 0;
         private Vector2 VelocityTMP;
         public event EventHandler OnEnemyDeath;
+
+        //private SoundEffect _deathSound;
 
         public override Rectangle Rectangle
         {
@@ -26,6 +30,7 @@ namespace Cosmic_Labirynth.Sprites
         public Bullet(Texture2D texture)
           : base(texture)
         {
+           // _deathSound = deathSound;
         }
 
         public override void SetMapMove(Vector2 moveVector)
@@ -76,6 +81,7 @@ namespace Cosmic_Labirynth.Sprites
                         {
                             boss.IsRemoved = true;
                             OnEnemyDeath?.Invoke(this, EventArgs.Empty);
+                            //_deathSound?.Play();
                             Debug.WriteLine("Boss removed.");
                         }
 
