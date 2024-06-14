@@ -42,6 +42,7 @@ namespace Cosmic_Labirynth.Sprites
 
         public event EventHandler OnEnemyCollision;
         public event EventHandler OnEnoughScore;
+        public event EventHandler OnBossBulletHit;
 
         public override Rectangle Rectangle
         {
@@ -120,6 +121,7 @@ namespace Cosmic_Labirynth.Sprites
         public void TakeDamage(int damage)
         {
             HP -= damage;
+            OnBossBulletHit?.Invoke(this, EventArgs.Empty);
             Debug.WriteLine($"Player took {damage} damage. Remaining HP: {HP}");
             if (HP <= 0)
             {
@@ -127,7 +129,7 @@ namespace Cosmic_Labirynth.Sprites
                 _deathSoundPlayer.Play();
                 Debug.WriteLine("Player removed after HP dropped to 0.");
                 // Trigger game over or any other logic for player death
-                OnEnemyCollision?.Invoke(this, EventArgs.Empty);
+                
             }
         }
         public override void Draw(SpriteBatch spriteBatch)

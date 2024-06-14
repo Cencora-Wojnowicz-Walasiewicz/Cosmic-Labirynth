@@ -168,9 +168,13 @@ namespace Cosmic_Labirynth.GameStates
 
                 player.OnEnemyCollision += Player_OnEnemyCollision;
                 player.OnEnoughScore += Player_OnEnoughScore;
-                _playerLife.UpdatePlayerLife(player.HP);
+                player.OnBossBulletHit += Player_OnBossBulletHit;
+
+
             }
 
+            player.PositionOnMap = player.Position;
+            _playerLife.UpdatePlayerLife(player.HP);
             _sprites.Add(player);
 
             // dodanie przeciwników
@@ -191,7 +195,7 @@ namespace Cosmic_Labirynth.GameStates
                     HP = 2,
                     _textureAngry = enemyTextureAlt
                 });
-                _sprites.Add(new Enemy(enemyTexture, new Vector2(6 * 32 * _Scale, 11 * 32 * _Scale), _deathSound)
+                _sprites.Add(new Enemy(enemyTexture, new Vector2(6 * 32 * _Scale, 10 * 32 * _Scale), _deathSound)
                 {
                     Speed = 1.0f * _Scale,
                     Scale = _Scale,
@@ -232,13 +236,15 @@ namespace Cosmic_Labirynth.GameStates
                 });
             }else if(mapNumber == 2)
             {
-                _sprites.Add(new Boss(bossTexture, bossTextureTransition1, bossTextureTransition2, bulletTexture, new Vector2(10 * 32 * _Scale, 10 * 32 * _Scale))
+                Boss boss = new Boss(bossTexture, bossTextureTransition1, bossTextureTransition2, bulletTexture, new Vector2(10 * 32 * _Scale, 10 * 32 * _Scale))
                 {
                     Speed = 1.0f * _Scale,
-                    Scale = 3.0f * _Scale,
+                    Scale = 2.0f * _Scale,
                     HP = 30,
                     _textureAngry = bossTexture // Ensure you have this texture loaded
-                });
+                };
+                boss.OnBossDeath += Boss_OnBossDeath;
+                _sprites.Add(boss);
             }
 
 
@@ -291,6 +297,30 @@ namespace Cosmic_Labirynth.GameStates
                 if (sprite is Door) (sprite as Door).active = true;
             }
         }
+
+        private void Boss_OnBossDeath(object sender, EventArgs e)
+        {
+            foreach (var sprite in _sprites)
+            {
+                if (sprite is Player)
+                {
+                    GameStateManager.Instance.ChangeScreen(new GameFinishGameState(_graphicsDevice, (sprite as Player).Score));
+                }
+            }
+            
+        }
+
+        private void Player_OnBossBulletHit(object sender, EventArgs e)
+        {
+            foreach(var sprite in _sprites)
+            {
+                if(sprite is Player)
+                {
+                    _playerLife.UpdatePlayerLife((sprite as Player).HP);
+                    if ((sprite as Player).HP < 1) (sprite as Player).EventExecuter(_graphicsDevice);
+                }
+            }
+        }
         #endregion
 
         //////////////////////////////////////////   UPDATE AND DRAW   ////////////////////////////////////////////////////////////
@@ -338,7 +368,7 @@ namespace Cosmic_Labirynth.GameStates
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            _graphicsDevice.Clear(Color.Red);
+            _graphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
             foreach (var sprite in _sprites)
             {

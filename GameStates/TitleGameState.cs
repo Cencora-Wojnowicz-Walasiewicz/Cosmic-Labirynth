@@ -95,6 +95,7 @@ namespace Cosmic_Labirynth.GameStates
         private void NewGameButton_Click(object sender, EventArgs e)
         {
             GameStateManager.Instance.ChangeScreen(new InGameGameState(_graphicsDevice));
+            //GameStateManager.Instance.ChangeScreen(new GameFinishGameState(_graphicsDevice, 5));
         }
 
         private void QuitGameButton_Click(object sender, EventArgs e)

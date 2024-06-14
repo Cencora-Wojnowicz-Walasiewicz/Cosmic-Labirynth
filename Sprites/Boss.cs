@@ -43,6 +43,8 @@ namespace Cosmic_Labirynth.Sprites
         public new float Scale = 10.0f;
         public int damage = 10;
 
+        public event EventHandler OnBossDeath;
+
         public List<Bullet> BossBullets { get; private set; } = new List<Bullet>();
 
         public override Rectangle Rectangle
@@ -136,7 +138,7 @@ namespace Cosmic_Labirynth.Sprites
             {
                 IsRemoved = true;
 
-               
+                OnBossDeath?.Invoke(this, EventArgs.Empty);
 
                 Debug.WriteLine("Boss removed after HP dropped to 0.");
             }
@@ -150,7 +152,7 @@ namespace Cosmic_Labirynth.Sprites
             // Main bullet
             Bullet mainBullet = new Bullet(_bulletTexture)
             {
-                Position = this.Position,
+                Position = this.Position + new Vector2(16*Scale,16*Scale),
                 Velocity = direction * 5f,
                 LifeSpan = 100
             };
@@ -163,7 +165,7 @@ namespace Cosmic_Labirynth.Sprites
                 Vector2 leftDirection = Vector2.Transform(direction, Matrix.CreateRotationZ(angle));
                 Bullet leftBullet = new Bullet(_bulletTexture)
                 {
-                    Position = this.Position,
+                    Position = this.Position + new Vector2(16 * Scale, 16 * Scale),
                     Velocity = leftDirection * 5f,
                     LifeSpan = 100
                 };
@@ -174,7 +176,7 @@ namespace Cosmic_Labirynth.Sprites
                 Vector2 rightDirection = Vector2.Transform(direction, Matrix.CreateRotationZ(angle));
                 Bullet rightBullet = new Bullet(_bulletTexture)
                 {
-                    Position = this.Position,
+                    Position = this.Position + new Vector2(16 * Scale, 16 * Scale),
                     Velocity = rightDirection * 5f,
                     LifeSpan = 100
                 };
